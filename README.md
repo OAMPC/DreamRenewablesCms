@@ -56,6 +56,18 @@ This project uses [Heroku Deploy with Git](https://devcenter.heroku.com/articles
 
 In order to build new content you must run the application locally in develop mode. From here you can build out the content via the UI which will automatically create relevant types as well as necessary endpoints to fetch content. Once satisfied and the branch has been merged into main Heroku's attached PostgresDB will update and you will be able to write the new content in the production Strapi view ready for the frontend to pull.
 
+### Additional Strapi Information
+
+- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
+- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
+- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core Strapi team and the community.
+- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
+- [Changelog](https://strapi.io/changelog) - Strapi product updates, new features and general improvements.
+- [Strapi GitHub repository](https://github.com/strapi/strapi) - Strapi repo for further information
+- [Discord](https://discord.strapi.io) - Chat with the Strapi community including the core team.
+- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, and get feedback or just talk with other Community members.
+- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+
 ### Related Repositories
 
 | Name                                                                                      | Description                                                   |
