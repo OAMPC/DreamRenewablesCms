@@ -1,61 +1,76 @@
-# 🚀 Getting started with Strapi
+# Dream Renewables CMS
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## Contents
 
-### `develop`
+- [About This Project](#about-this-project)
+- [Setup](#setup)
+  - [Requirements](#requirements)
+    - [Installing project dependencies](#installing-project-dependencies)
+- [Usage](#usage)
+  - [Running the Application](#running-the-application)
+- [Continuous Integration, Development and Deployment](#continuous-integration-development-and-deployment)
+  - [CI/CD](#cicd)
+- [Further documentation](#further-documentation)
+  - [Related Repositories](#related-repositories)
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## About This Project
 
-```
-npm run develop
-# or
-yarn develop
-```
+This is the Repo/Code for the [Dream Renewables CMS](https://dream-renewables-strapi-cc05c70b96d6.herokuapp.com/). This application primarily utilises the following technologies:
 
-### `start`
+- [Strapi](https://strapi.io/)
+- [Heroku Deploy with Git](https://devcenter.heroku.com/articles/git)
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+## Setup
 
-```
-npm run start
-# or
-yarn start
-```
+### Requirements
 
-### `build`
+This project requires the following pre-requisites:
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+1. [NodeJs](https://nodejs.org/en)
 
-```
-npm run build
-# or
-yarn build
-```
+#### Installing project dependencies
 
-## ⚙️ Deployment
+1. Clone the repo to your chosen directory
+2. Install dependencies `npm i`
+3. Create a .env file in the project root directory: `touch .env`
+   - Secrets can be sourced from Heroku or a project admin
+4. Build the admin panel with: `npm run build`
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+## Usage
 
-```
-yarn strapi deploy
-```
+### Running the application
 
-## 📚 Learn more
+To run the application you must ensure you've followed the setup steps
+
+- To run the app via Node:
+  - Ensure you're in the root directory
+  - spin up the application: `npm run develop`
+
+## Continuous Integration, Development and Deployment
+
+### CI/CD
+
+This project uses [Heroku Deploy with Git](https://devcenter.heroku.com/articles/git). In order to deploy merge a branch to main, once merged to main a hook in Heroku will catch and deploy the application.
+
+## Further documentation
+
+In order to build new content you must run the application locally in develop mode. From here you can build out the content via the UI which will automatically create relevant types as well as necessary endpoints to fetch content. Once satisfied and the branch has been merged into main Heroku's attached PostgresDB will update and you will be able to write the new content in the production Strapi view ready for the frontend to pull.
+
+### Additional Strapi Information
 
 - [Resource center](https://strapi.io/resource-center) - Strapi resource center.
 - [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
+- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core Strapi team and the community.
 - [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
+- [Changelog](https://strapi.io/changelog) - Strapi product updates, new features and general improvements.
+- [Strapi GitHub repository](https://github.com/strapi/strapi) - Strapi repo for further information
+- [Discord](https://discord.strapi.io) - Chat with the Strapi community including the core team.
+- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, and get feedback or just talk with other Community members.
 - [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
 
----
+### Related Repositories
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+| Name                                                                                      | Description                                                   |
+| :---------------------------------------------------------------------------------------- | :------------------------------------------------------------ |
+| [Dream Renewables Frontend](https://github.com/OAMPC/DreamRenewablesFrontend)             | React code for this web application                           |
+| [Dream Renewables Infrastructure](https://github.com/OAMPC/DreamRenewablesInfrastructure) | The Terraform for this web applications required architecture |
