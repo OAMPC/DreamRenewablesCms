@@ -368,12 +368,14 @@ export interface ApiHelloWorldHelloWorld extends Schema.CollectionType {
     singularName: 'hello-world';
     pluralName: 'hello-worlds';
     displayName: 'Hello World';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     helloWorldText: Attribute.Text;
+    helloWorldImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
