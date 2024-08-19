@@ -362,31 +362,32 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiHelloWorldHelloWorld extends Schema.CollectionType {
-  collectionName: 'hello_worlds';
+export interface ApiNavigationBarNavigationBar extends Schema.SingleType {
+  collectionName: 'navigation_bars';
   info: {
-    singularName: 'hello-world';
-    pluralName: 'hello-worlds';
-    displayName: 'Hello World';
-    description: '';
+    singularName: 'navigation-bar';
+    pluralName: 'navigation-bars';
+    displayName: 'Navigation Bar';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    helloWorldText: Attribute.Text;
-    helloWorldImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    brandImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    standardLink: Attribute.Component<'navigation-bar.link', true>;
+    dropdownLink: Attribute.Component<'navigation-bar.drop-down-links', true>;
+    button: Attribute.Component<'navigation-bar.button'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::hello-world.hello-world',
+      'api::navigation-bar.navigation-bar',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::hello-world.hello-world',
+      'api::navigation-bar.navigation-bar',
       'oneToOne',
       'admin::user'
     > &
@@ -830,7 +831,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::hello-world.hello-world': ApiHelloWorldHelloWorld;
+      'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_navigation_bar_links",
+  "info": {
+    "displayName": "Standard Link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "linkString": {
+      "type": "string"
+    },
+    "linkSlug": {
+      "type": "string"
+    }
+  }
+}
