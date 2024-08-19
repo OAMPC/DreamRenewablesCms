@@ -6,13 +6,17 @@
   },
   "options": {},
   "attributes": {
-    "dropDownLinkString": {
-      "type": "string"
+    "dropdownLinkString": {
+      "type": "string",
+      "required": true,
+      "unique": false
     },
-    "dropDownLinkSlug": {
-      "type": "string"
+    "dropdownLinkSlug": {
+      "type": "string",
+      "required": true,
+      "unique": false
     },
-    "dropDownLinks": {
+    "nestedLinks": {
       "type": "component",
       "repeatable": true,
       "component": "navigation-bar.link"
