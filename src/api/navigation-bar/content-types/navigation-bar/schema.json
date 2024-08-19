@@ -4,7 +4,8 @@
   "info": {
     "singularName": "navigation-bar",
     "pluralName": "navigation-bars",
-    "displayName": "Navigation Bar"
+    "displayName": "Navigation Bar",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,22 +13,23 @@
   "pluginOptions": {},
   "attributes": {
     "brandImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "standardLink": {
+    "standardLinks": {
       "displayName": "link",
       "type": "component",
       "repeatable": true,
       "component": "navigation-bar.link"
     },
-    "dropdownLink": {
+    "dropdownLinks": {
       "displayName": "Drop Down Links",
       "type": "component",
       "repeatable": true,

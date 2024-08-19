@@ -7,10 +7,14 @@
   "options": {},
   "attributes": {
     "linkString": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": false
     },
     "linkSlug": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": false
     }
   }
 }

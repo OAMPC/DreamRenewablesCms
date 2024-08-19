@@ -368,14 +368,15 @@ export interface ApiNavigationBarNavigationBar extends Schema.SingleType {
     singularName: 'navigation-bar';
     pluralName: 'navigation-bars';
     displayName: 'Navigation Bar';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     brandImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    standardLink: Attribute.Component<'navigation-bar.link', true>;
-    dropdownLink: Attribute.Component<'navigation-bar.drop-down-links', true>;
+    standardLinks: Attribute.Component<'navigation-bar.link', true>;
+    dropdownLinks: Attribute.Component<'navigation-bar.drop-down-links', true>;
     button: Attribute.Component<'navigation-bar.button'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

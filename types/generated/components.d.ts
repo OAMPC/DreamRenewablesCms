@@ -4,10 +4,11 @@ export interface NavigationBarButton extends Schema.Component {
   collectionName: 'components_navigation_bar_buttons';
   info: {
     displayName: 'Button';
+    description: '';
   };
   attributes: {
-    buttonString: Attribute.String;
-    buttonSlug: Attribute.String;
+    buttonString: Attribute.String & Attribute.Required;
+    buttonSlug: Attribute.String & Attribute.Required;
   };
 }
 
@@ -18,9 +19,9 @@ export interface NavigationBarDropDownLinks extends Schema.Component {
     description: '';
   };
   attributes: {
-    dropDownLinkString: Attribute.String;
-    dropDownLinkSlug: Attribute.String;
-    dropDownLinks: Attribute.Component<'navigation-bar.link', true>;
+    dropdownLinkString: Attribute.String & Attribute.Required;
+    dropdownLinkSlug: Attribute.String & Attribute.Required;
+    nestedLinks: Attribute.Component<'navigation-bar.link', true>;
   };
 }
 
@@ -31,8 +32,8 @@ export interface NavigationBarLink extends Schema.Component {
     description: '';
   };
   attributes: {
-    linkString: Attribute.String;
-    linkSlug: Attribute.String;
+    linkString: Attribute.String & Attribute.Required;
+    linkSlug: Attribute.String & Attribute.Required;
   };
 }
 
