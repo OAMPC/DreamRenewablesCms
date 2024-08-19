@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "navigation_bars",
+  "info": {
+    "singularName": "navigation-bar",
+    "pluralName": "navigation-bars",
+    "displayName": "Navigation Bar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brandImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "standardLink": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation-bar.link"
+    },
+    "dropdownLink": {
+      "displayName": "Drop Down Links",
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation-bar.drop-down-links"
+    },
+    "button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": false,
+      "component": "navigation-bar.button"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_navigation_bar_drop_down_links",
+  "info": {
+    "displayName": "Drop Down Link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "dropDownLinkString": {
+      "type": "string"
+    },
+    "dropDownLinkSlug": {
+      "type": "string"
+    },
+    "dropDownLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation-bar.link"
+    }
+  }
+}
