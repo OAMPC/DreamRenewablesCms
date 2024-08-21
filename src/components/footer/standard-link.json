@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_footer_standard_links",
+  "info": {
+    "displayName": "Standard Link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "linkString": {
+      "type": "string",
+      "required": true
+    },
+    "linkSlug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

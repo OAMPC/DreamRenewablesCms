@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_footer_navigation_links",
+  "info": {
+    "displayName": "Navigation Links",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "navigationLinksTitle": {
+      "type": "string",
+      "required": true
+    },
+    "standardLinks": {
+      "displayName": "Standard Link",
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.standard-link",
+      "required": true
+    }
+  }
+}
