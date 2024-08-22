@@ -22,8 +22,7 @@ export interface FooterNavigationLinks extends Schema.Component {
   };
   attributes: {
     navigationLinksTitle: Attribute.String & Attribute.Required;
-    standardLinks: Attribute.Component<'footer.standard-link', true> &
-      Attribute.Required;
+    standardLinks: Attribute.Component<'utility.standard-link', true>;
   };
 }
 
@@ -35,18 +34,6 @@ export interface FooterSocialMediaLinks extends Schema.Component {
   attributes: {
     socialMediaLinksTitle: Attribute.String & Attribute.Required;
     iconLinks: Attribute.Component<'utility.icon-link', true>;
-  };
-}
-
-export interface FooterStandardLink extends Schema.Component {
-  collectionName: 'components_footer_standard_links';
-  info: {
-    displayName: 'Standard Link';
-    description: '';
-  };
-  attributes: {
-    linkString: Attribute.String & Attribute.Required;
-    linkSlug: Attribute.String & Attribute.Required;
   };
 }
 
@@ -71,19 +58,7 @@ export interface NavigationBarDropDownLinks extends Schema.Component {
   attributes: {
     dropdownLinkString: Attribute.String & Attribute.Required;
     dropdownLinkSlug: Attribute.String & Attribute.Required;
-    nestedLinks: Attribute.Component<'navigation-bar.link', true>;
-  };
-}
-
-export interface NavigationBarLink extends Schema.Component {
-  collectionName: 'components_navigation_bar_links';
-  info: {
-    displayName: 'Standard Link';
-    description: '';
-  };
-  attributes: {
-    linkString: Attribute.String & Attribute.Required;
-    linkSlug: Attribute.String & Attribute.Required;
+    nestedLinks: Attribute.Component<'utility.standard-link', true>;
   };
 }
 
@@ -100,17 +75,27 @@ export interface UtilityIconLink extends Schema.Component {
   };
 }
 
+export interface UtilityStandardLink extends Schema.Component {
+  collectionName: 'components_utility_standard_links';
+  info: {
+    displayName: 'Standard Link';
+  };
+  attributes: {
+    linkString: Attribute.String;
+    linkSlug: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'footer.contact-information': FooterContactInformation;
       'footer.navigation-links': FooterNavigationLinks;
       'footer.social-media-links': FooterSocialMediaLinks;
-      'footer.standard-link': FooterStandardLink;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
-      'navigation-bar.link': NavigationBarLink;
       'utility.icon-link': UtilityIconLink;
+      'utility.standard-link': UtilityStandardLink;
     }
   }
 }

@@ -841,9 +841,9 @@ export interface ApiNavigationBarNavigationBar extends Schema.SingleType {
   };
   attributes: {
     brandImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    standardLinks: Attribute.Component<'navigation-bar.link', true>;
     dropdownLinks: Attribute.Component<'navigation-bar.drop-down-links', true>;
     button: Attribute.Component<'navigation-bar.button'>;
+    standardLinks: Attribute.Component<'utility.standard-link', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

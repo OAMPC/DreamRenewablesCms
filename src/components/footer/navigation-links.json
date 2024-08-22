@@ -11,11 +11,9 @@
       "required": true
     },
     "standardLinks": {
-      "displayName": "Standard Link",
       "type": "component",
       "repeatable": true,
-      "component": "footer.standard-link",
-      "required": true
+      "component": "utility.standard-link"
     }
   }
 }

@@ -19,7 +19,7 @@
     "nestedLinks": {
       "type": "component",
       "repeatable": true,
-      "component": "navigation-bar.link"
+      "component": "utility.standard-link"
     }
   }
 }
