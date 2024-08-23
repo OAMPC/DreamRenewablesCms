@@ -362,40 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiNavigationBarNavigationBar extends Schema.SingleType {
-  collectionName: 'navigation_bars';
-  info: {
-    singularName: 'navigation-bar';
-    pluralName: 'navigation-bars';
-    displayName: 'Navigation Bar';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    brandImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    standardLinks: Attribute.Component<'navigation-bar.link', true>;
-    dropdownLinks: Attribute.Component<'navigation-bar.drop-down-links', true>;
-    button: Attribute.Component<'navigation-bar.button'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::navigation-bar.navigation-bar',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::navigation-bar.navigation-bar',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -822,6 +788,79 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiFooterFooter extends Schema.SingleType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    textBody: Attribute.Text & Attribute.Required;
+    navigationLinks: Attribute.Component<'footer.navigation-links'> &
+      Attribute.Required;
+    socialMediaLinks: Attribute.Component<'footer.social-media-links'> &
+      Attribute.Required;
+    contactInformation: Attribute.Component<'footer.contact-information'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiNavigationBarNavigationBar extends Schema.SingleType {
+  collectionName: 'navigation_bars';
+  info: {
+    singularName: 'navigation-bar';
+    pluralName: 'navigation-bars';
+    displayName: 'Navigation Bar';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brandImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    dropdownLinks: Attribute.Component<'navigation-bar.drop-down-links', true>;
+    button: Attribute.Component<'navigation-bar.button'>;
+    standardLinks: Attribute.Component<'utility.standard-link', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::navigation-bar.navigation-bar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::navigation-bar.navigation-bar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -832,7 +871,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -841,6 +879,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::footer.footer': ApiFooterFooter;
+      'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
     }
   }
 }

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_utility_icon_links",
+  "info": {
+    "displayName": "Icon Link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "linkSlug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

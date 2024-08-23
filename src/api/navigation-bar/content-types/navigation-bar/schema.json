@@ -23,12 +23,6 @@
         "audios"
       ]
     },
-    "standardLinks": {
-      "displayName": "link",
-      "type": "component",
-      "repeatable": true,
-      "component": "navigation-bar.link"
-    },
     "dropdownLinks": {
       "displayName": "Drop Down Links",
       "type": "component",
@@ -40,6 +34,11 @@
       "type": "component",
       "repeatable": false,
       "component": "navigation-bar.button"
+    },
+    "standardLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utility.standard-link"
     }
   }
 }

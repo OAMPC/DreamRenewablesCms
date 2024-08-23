@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_footer_contact_informations",
+  "info": {
+    "displayName": "Contact Information"
+  },
+  "options": {},
+  "attributes": {
+    "contactInformationTitle": {
+      "type": "string",
+      "required": true
+    },
+    "contactInformationName": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
