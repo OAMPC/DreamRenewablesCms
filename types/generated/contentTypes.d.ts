@@ -802,7 +802,6 @@ export interface ApiFooterFooter extends Schema.SingleType {
   attributes: {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
-    imageCaption: Attribute.String & Attribute.Required;
     textBody: Attribute.Text & Attribute.Required;
     navigationLinks: Attribute.Component<'footer.navigation-links'> &
       Attribute.Required;

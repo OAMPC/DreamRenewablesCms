@@ -23,10 +23,6 @@
         "audios"
       ]
     },
-    "imageCaption": {
-      "type": "string",
-      "required": true
-    },
     "textBody": {
       "type": "text",
       "required": true
