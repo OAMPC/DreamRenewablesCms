@@ -827,6 +827,38 @@ export interface ApiFooterFooter extends Schema.SingleType {
   };
 }
 
+export interface ApiLandingPageLandingPage extends Schema.SingleType {
+  collectionName: 'landing_pages';
+  info: {
+    singularName: 'landing-page';
+    pluralName: 'landing-pages';
+    displayName: 'Landing Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    landingImage: Attribute.Component<'landing-page.initial-image'>;
+    videoSection: Attribute.Component<'landing-page.video-section'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::landing-page.landing-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::landing-page.landing-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiNavigationBarNavigationBar extends Schema.SingleType {
   collectionName: 'navigation_bars';
   info: {
@@ -880,6 +912,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::footer.footer': ApiFooterFooter;
+      'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
     }
   }

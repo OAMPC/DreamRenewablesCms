@@ -37,6 +37,32 @@ export interface FooterSocialMediaLinks extends Schema.Component {
   };
 }
 
+export interface LandingPageInitialImage extends Schema.Component {
+  collectionName: 'components_landing_page_initial_images';
+  info: {
+    displayName: 'Landing Image';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    subTitle: Attribute.String;
+  };
+}
+
+export interface LandingPageVideoSection extends Schema.Component {
+  collectionName: 'components_landing_page_video_sections';
+  info: {
+    displayName: 'Video Section';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    subTitle: Attribute.String & Attribute.Required;
+    videoLink: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface NavigationBarButton extends Schema.Component {
   collectionName: 'components_navigation_bar_buttons';
   info: {
@@ -92,6 +118,8 @@ declare module '@strapi/types' {
       'footer.contact-information': FooterContactInformation;
       'footer.navigation-links': FooterNavigationLinks;
       'footer.social-media-links': FooterSocialMediaLinks;
+      'landing-page.initial-image': LandingPageInitialImage;
+      'landing-page.video-section': LandingPageVideoSection;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
       'utility.icon-link': UtilityIconLink;
