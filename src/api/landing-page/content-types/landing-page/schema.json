@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "landingImage": {
+    "landingImageDesktop": {
       "displayName": "Initial Image",
       "type": "component",
       "repeatable": false,
@@ -23,6 +23,11 @@
       "type": "component",
       "repeatable": false,
       "component": "landing-page.video-section"
+    },
+    "landingImageMobile": {
+      "type": "component",
+      "repeatable": false,
+      "component": "landing-page.initial-image"
     }
   }
 }
