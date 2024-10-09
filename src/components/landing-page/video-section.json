@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_landing_page_video_sections",
+  "info": {
+    "displayName": "Video Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subTitle": {
+      "type": "string",
+      "required": true
+    },
+    "videoLink": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    }
+  }
+}
