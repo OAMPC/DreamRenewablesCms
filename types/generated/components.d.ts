@@ -55,12 +55,14 @@ export interface LandingPageSpecialityCarouselItem extends Schema.Component {
   collectionName: 'components_landing_page_speciality_carousel_items';
   info: {
     displayName: 'Speciality Carousel Item';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.String;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     link: Attribute.Component<'utility.standard-link'>;
+    linkIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
