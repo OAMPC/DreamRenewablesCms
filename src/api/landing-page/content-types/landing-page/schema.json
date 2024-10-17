@@ -29,10 +29,10 @@
       "repeatable": false,
       "component": "landing-page.initial-image"
     },
-    "specialityCarousel": {
+    "specialitySection": {
       "type": "component",
-      "repeatable": true,
-      "component": "landing-page.specialty-carousel"
+      "repeatable": false,
+      "component": "landing-page.specialty-carousel-section"
     }
   }
 }

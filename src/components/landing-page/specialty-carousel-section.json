@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_landing_page_specialty_carousel_sections",
+  "info": {
+    "displayName": "Specialty Carousel Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "specialityCarousel": {
+      "displayName": "Speciality Carousel Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "landing-page.speciality-carousel-item"
+    }
+  }
+}

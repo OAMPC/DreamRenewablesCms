@@ -51,17 +51,30 @@ export interface LandingPageInitialImage extends Schema.Component {
   };
 }
 
-export interface LandingPageSpecialtyCarousel extends Schema.Component {
-  collectionName: 'components_landing_page_specialty_carousels';
+export interface LandingPageSpecialityCarouselItem extends Schema.Component {
+  collectionName: 'components_landing_page_speciality_carousel_items';
   info: {
-    displayName: 'Specialty Carousel Item';
-    description: '';
+    displayName: 'Speciality Carousel Item';
   };
   attributes: {
-    specialityImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    specialityTitle: Attribute.String;
-    specialityDescription: Attribute.Text;
+    title: Attribute.String;
+    description: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     link: Attribute.Component<'utility.standard-link'>;
+  };
+}
+
+export interface LandingPageSpecialtyCarouselSection extends Schema.Component {
+  collectionName: 'components_landing_page_specialty_carousel_sections';
+  info: {
+    displayName: 'Specialty Carousel Section';
+  };
+  attributes: {
+    title: Attribute.String;
+    specialityCarousel: Attribute.Component<
+      'landing-page.speciality-carousel-item',
+      true
+    >;
   };
 }
 
@@ -133,7 +146,8 @@ declare module '@strapi/types' {
       'footer.navigation-links': FooterNavigationLinks;
       'footer.social-media-links': FooterSocialMediaLinks;
       'landing-page.initial-image': LandingPageInitialImage;
-      'landing-page.specialty-carousel': LandingPageSpecialtyCarousel;
+      'landing-page.speciality-carousel-item': LandingPageSpecialityCarouselItem;
+      'landing-page.specialty-carousel-section': LandingPageSpecialtyCarouselSection;
       'landing-page.video-section': LandingPageVideoSection;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
