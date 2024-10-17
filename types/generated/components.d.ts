@@ -51,6 +51,20 @@ export interface LandingPageInitialImage extends Schema.Component {
   };
 }
 
+export interface LandingPageSpecialtyCarousel extends Schema.Component {
+  collectionName: 'components_landing_page_specialty_carousels';
+  info: {
+    displayName: 'Specialty Carousel Item';
+    description: '';
+  };
+  attributes: {
+    specialityImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    specialityTitle: Attribute.String;
+    specialityDescription: Attribute.Text;
+    link: Attribute.Component<'utility.standard-link'>;
+  };
+}
+
 export interface LandingPageVideoSection extends Schema.Component {
   collectionName: 'components_landing_page_video_sections';
   info: {
@@ -119,6 +133,7 @@ declare module '@strapi/types' {
       'footer.navigation-links': FooterNavigationLinks;
       'footer.social-media-links': FooterSocialMediaLinks;
       'landing-page.initial-image': LandingPageInitialImage;
+      'landing-page.specialty-carousel': LandingPageSpecialtyCarousel;
       'landing-page.video-section': LandingPageVideoSection;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;

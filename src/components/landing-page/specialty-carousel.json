@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_landing_page_specialty_carousels",
+  "info": {
+    "displayName": "Specialty Carousel Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "specialityImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "specialityTitle": {
+      "type": "string"
+    },
+    "specialityDescription": {
+      "type": "text"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "utility.standard-link"
+    }
+  }
+}

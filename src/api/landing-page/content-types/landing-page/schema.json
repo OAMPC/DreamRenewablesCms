@@ -28,6 +28,11 @@
       "type": "component",
       "repeatable": false,
       "component": "landing-page.initial-image"
+    },
+    "specialityCarousel": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing-page.specialty-carousel"
     }
   }
 }
