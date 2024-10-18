@@ -28,6 +28,11 @@
       "type": "component",
       "repeatable": false,
       "component": "landing-page.initial-image"
+    },
+    "specialitySection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "landing-page.specialty-carousel-section"
     }
   }
 }
