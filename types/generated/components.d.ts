@@ -51,6 +51,22 @@ export interface LandingPageInitialImage extends Schema.Component {
   };
 }
 
+export interface LandingPagePaymentSection extends Schema.Component {
+  collectionName: 'components_landing_page_payment_sections';
+  info: {
+    displayName: 'Payment Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    subTitle: Attribute.String;
+    paymentOptions: Attribute.Component<'utility.payment-option', true>;
+    paymentOptionIcon: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
 export interface LandingPageSpecialityCarouselItem extends Schema.Component {
   collectionName: 'components_landing_page_speciality_carousel_items';
   info: {
@@ -130,6 +146,18 @@ export interface UtilityIconLink extends Schema.Component {
   };
 }
 
+export interface UtilityPaymentOption extends Schema.Component {
+  collectionName: 'components_utility_payment_options';
+  info: {
+    displayName: 'Payment Option';
+    description: '';
+  };
+  attributes: {
+    amount: Attribute.Decimal;
+    description: Attribute.Text;
+  };
+}
+
 export interface UtilityStandardLink extends Schema.Component {
   collectionName: 'components_utility_standard_links';
   info: {
@@ -148,12 +176,14 @@ declare module '@strapi/types' {
       'footer.navigation-links': FooterNavigationLinks;
       'footer.social-media-links': FooterSocialMediaLinks;
       'landing-page.initial-image': LandingPageInitialImage;
+      'landing-page.payment-section': LandingPagePaymentSection;
       'landing-page.speciality-carousel-item': LandingPageSpecialityCarouselItem;
       'landing-page.specialty-carousel-section': LandingPageSpecialtyCarouselSection;
       'landing-page.video-section': LandingPageVideoSection;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
       'utility.icon-link': UtilityIconLink;
+      'utility.payment-option': UtilityPaymentOption;
       'utility.standard-link': UtilityStandardLink;
     }
   }

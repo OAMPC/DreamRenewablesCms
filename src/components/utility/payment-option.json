@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_utility_payment_options",
+  "info": {
+    "displayName": "Payment Option",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
