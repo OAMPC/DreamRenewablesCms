@@ -33,6 +33,11 @@
       "type": "component",
       "repeatable": false,
       "component": "landing-page.specialty-carousel-section"
+    },
+    "paymentSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "landing-page.payment-section"
     }
   }
 }
