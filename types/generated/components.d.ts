@@ -67,6 +67,35 @@ export interface LandingPagePaymentSection extends Schema.Component {
   };
 }
 
+export interface LandingPageQuoteCarouselItem extends Schema.Component {
+  collectionName: 'components_landing_page_quote_carousel_items';
+  info: {
+    displayName: 'Quote Carousel Item';
+  };
+  attributes: {
+    quoteText: Attribute.Text & Attribute.Required;
+    quoteAuthor: Attribute.String & Attribute.Required;
+    quoteAuthorRole: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface LandingPageQuoteSection extends Schema.Component {
+  collectionName: 'components_landing_page_quote_sections';
+  info: {
+    displayName: 'Quote Section';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    quoteCarousel: Attribute.Component<
+      'landing-page.quote-carousel-item',
+      true
+    > &
+      Attribute.Required;
+    quoteIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+  };
+}
+
 export interface LandingPageSpecialityCarouselItem extends Schema.Component {
   collectionName: 'components_landing_page_speciality_carousel_items';
   info: {
@@ -177,6 +206,8 @@ declare module '@strapi/types' {
       'footer.social-media-links': FooterSocialMediaLinks;
       'landing-page.initial-image': LandingPageInitialImage;
       'landing-page.payment-section': LandingPagePaymentSection;
+      'landing-page.quote-carousel-item': LandingPageQuoteCarouselItem;
+      'landing-page.quote-section': LandingPageQuoteSection;
       'landing-page.speciality-carousel-item': LandingPageSpecialityCarouselItem;
       'landing-page.specialty-carousel-section': LandingPageSpecialtyCarouselSection;
       'landing-page.video-section': LandingPageVideoSection;
