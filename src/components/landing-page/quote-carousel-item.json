@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_landing_page_quote_carousel_items",
+  "info": {
+    "displayName": "Quote Carousel Item"
+  },
+  "options": {},
+  "attributes": {
+    "quoteText": {
+      "type": "text",
+      "required": true
+    },
+    "quoteAuthor": {
+      "type": "string",
+      "required": true
+    },
+    "quoteAuthorRole": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

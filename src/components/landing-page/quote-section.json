@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_landing_page_quote_sections",
+  "info": {
+    "displayName": "Quote Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "quoteCarousel": {
+      "displayName": "Quote Carousel Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "landing-page.quote-carousel-item",
+      "required": true
+    },
+    "quoteIcon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

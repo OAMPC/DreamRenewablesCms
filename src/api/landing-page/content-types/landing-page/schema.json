@@ -38,6 +38,12 @@
       "type": "component",
       "repeatable": false,
       "component": "landing-page.payment-section"
+    },
+    "quoteSection": {
+      "displayName": "Quote Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "landing-page.quote-section"
     }
   }
 }

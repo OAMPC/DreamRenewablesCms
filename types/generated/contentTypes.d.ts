@@ -844,6 +844,7 @@ export interface ApiLandingPageLandingPage extends Schema.SingleType {
     landingImageMobile: Attribute.Component<'landing-page.initial-image'>;
     specialitySection: Attribute.Component<'landing-page.specialty-carousel-section'>;
     paymentSection: Attribute.Component<'landing-page.payment-section'>;
+    quoteSection: Attribute.Component<'landing-page.quote-section'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
