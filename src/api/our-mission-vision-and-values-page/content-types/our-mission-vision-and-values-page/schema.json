@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_mission_vision_and_values_pages",
+  "info": {
+    "singularName": "our-mission-vision-and-values-page",
+    "pluralName": "our-mission-vision-and-values-pages",
+    "displayName": "Our Mission, Vision and Values Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "required": true
+    },
+    "pageSubTitle": {
+      "type": "string",
+      "required": true
+    },
+    "ourMissionSection": {
+      "displayName": "Our Mission Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "our-mission-vision-and-values-page.our-mission-section",
+      "required": true
+    },
+    "ourVisionSection": {
+      "displayName": "Our Vision Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "our-mission-vision-and-values-page.our-vision-section",
+      "required": true
+    },
+    "ourValuesSection": {
+      "displayName": "Our Values Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "our-mission-vision-and-values-page.our-values-section",
+      "required": true
+    }
+  }
+}

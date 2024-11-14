@@ -897,6 +897,45 @@ export interface ApiNavigationBarNavigationBar extends Schema.SingleType {
   };
 }
 
+export interface ApiOurMissionVisionAndValuesPageOurMissionVisionAndValuesPage
+  extends Schema.SingleType {
+  collectionName: 'our_mission_vision_and_values_pages';
+  info: {
+    singularName: 'our-mission-vision-and-values-page';
+    pluralName: 'our-mission-vision-and-values-pages';
+    displayName: 'Our Mission, Vision and Values Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pageTitle: Attribute.String & Attribute.Required;
+    pageSubTitle: Attribute.String & Attribute.Required;
+    ourMissionSection: Attribute.Component<'our-mission-vision-and-values-page.our-mission-section'> &
+      Attribute.Required;
+    ourVisionSection: Attribute.Component<'our-mission-vision-and-values-page.our-vision-section'> &
+      Attribute.Required;
+    ourValuesSection: Attribute.Component<'our-mission-vision-and-values-page.our-values-section'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-mission-vision-and-values-page.our-mission-vision-and-values-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-mission-vision-and-values-page.our-mission-vision-and-values-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -918,6 +957,7 @@ declare module '@strapi/types' {
       'api::footer.footer': ApiFooterFooter;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
+      'api::our-mission-vision-and-values-page.our-mission-vision-and-values-page': ApiOurMissionVisionAndValuesPageOurMissionVisionAndValuesPage;
     }
   }
 }

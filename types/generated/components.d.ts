@@ -162,6 +162,70 @@ export interface NavigationBarDropDownLinks extends Schema.Component {
   };
 }
 
+export interface OurMissionVisionAndValuesPageOurMissionSection
+  extends Schema.Component {
+  collectionName: 'components_our_mission_vision_and_values_page_our_mission_sections';
+  info: {
+    displayName: 'Our Mission Section';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    sectionDescription: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface OurMissionVisionAndValuesPageOurValueEntry
+  extends Schema.Component {
+  collectionName: 'components_our_mission_vision_and_values_page_our_value_entries';
+  info: {
+    displayName: 'Our Value Entry';
+  };
+  attributes: {
+    valueEntry: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface OurMissionVisionAndValuesPageOurValuesSection
+  extends Schema.Component {
+  collectionName: 'components_our_mission_vision_and_values_page_our_values_sections';
+  info: {
+    displayName: 'Our Values Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    ourValuesEntries: Attribute.Component<
+      'our-mission-vision-and-values-page.our-value-entry',
+      true
+    > &
+      Attribute.Required;
+    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+  };
+}
+
+export interface OurMissionVisionAndValuesPageOurVisionSection
+  extends Schema.Component {
+  collectionName: 'components_our_mission_vision_and_values_page_our_vision_sections';
+  info: {
+    displayName: 'Our Vision Section';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    sectionDescription: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface UtilityIconLink extends Schema.Component {
   collectionName: 'components_utility_icon_links';
   info: {
@@ -213,6 +277,10 @@ declare module '@strapi/types' {
       'landing-page.video-section': LandingPageVideoSection;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
+      'our-mission-vision-and-values-page.our-mission-section': OurMissionVisionAndValuesPageOurMissionSection;
+      'our-mission-vision-and-values-page.our-value-entry': OurMissionVisionAndValuesPageOurValueEntry;
+      'our-mission-vision-and-values-page.our-values-section': OurMissionVisionAndValuesPageOurValuesSection;
+      'our-mission-vision-and-values-page.our-vision-section': OurMissionVisionAndValuesPageOurVisionSection;
       'utility.icon-link': UtilityIconLink;
       'utility.payment-option': UtilityPaymentOption;
       'utility.standard-link': UtilityStandardLink;
