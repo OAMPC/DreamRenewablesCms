@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_our_mission_vision_and_values_page_our_values_sections",
+  "info": {
+    "displayName": "Our Values Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "titleIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ourValuesEntries": {
+      "displayName": "Our Value Entry",
+      "type": "component",
+      "repeatable": true,
+      "component": "our-mission-vision-and-values-page.our-value-entry",
+      "required": true
+    },
+    "sectionImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

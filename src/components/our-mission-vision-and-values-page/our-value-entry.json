@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_our_mission_vision_and_values_page_our_value_entries",
+  "info": {
+    "displayName": "Our Value Entry"
+  },
+  "options": {},
+  "attributes": {
+    "valueEntry": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
