@@ -137,6 +137,65 @@ export interface LandingPageVideoSection extends Schema.Component {
   };
 }
 
+export interface MissionVisionValuesPageOurMission extends Schema.Component {
+  collectionName: 'components_mission_vision_values_page_our_missions';
+  info: {
+    displayName: 'Our Mission';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    sectionDescription: Attribute.Text;
+  };
+}
+
+export interface MissionVisionValuesPageOurValues extends Schema.Component {
+  collectionName: 'components_mission_vision_values_page_our_values';
+  info: {
+    displayName: 'Our Values';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    ourValuesEntries: Attribute.Component<
+      'mission-vision-values-page.values-entries',
+      true
+    > &
+      Attribute.Required;
+    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+  };
+}
+
+export interface MissionVisionValuesPageOurVision extends Schema.Component {
+  collectionName: 'components_mission_vision_values_page_our_visions';
+  info: {
+    displayName: 'Our Vision';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    sectionDescription: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface MissionVisionValuesPageValuesEntries extends Schema.Component {
+  collectionName: 'components_mission_vision_values_page_values_entries';
+  info: {
+    displayName: 'Values Entries';
+  };
+  attributes: {
+    valueEntry: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface NavigationBarButton extends Schema.Component {
   collectionName: 'components_navigation_bar_buttons';
   info: {
@@ -159,70 +218,6 @@ export interface NavigationBarDropDownLinks extends Schema.Component {
     dropdownLinkString: Attribute.String & Attribute.Required;
     dropdownLinkSlug: Attribute.String & Attribute.Required;
     nestedLinks: Attribute.Component<'utility.standard-link', true>;
-  };
-}
-
-export interface OurMissionVisionAndValuesPageOurMissionSection
-  extends Schema.Component {
-  collectionName: 'components_our_mission_vision_and_values_page_our_mission_sections';
-  info: {
-    displayName: 'Our Mission Section';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    sectionDescription: Attribute.Text & Attribute.Required;
-  };
-}
-
-export interface OurMissionVisionAndValuesPageOurValueEntry
-  extends Schema.Component {
-  collectionName: 'components_our_mission_vision_and_values_page_our_value_entries';
-  info: {
-    displayName: 'Our Value Entry';
-  };
-  attributes: {
-    valueEntry: Attribute.Text & Attribute.Required;
-  };
-}
-
-export interface OurMissionVisionAndValuesPageOurValuesSection
-  extends Schema.Component {
-  collectionName: 'components_our_mission_vision_and_values_page_our_values_sections';
-  info: {
-    displayName: 'Our Values Section';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    ourValuesEntries: Attribute.Component<
-      'our-mission-vision-and-values-page.our-value-entry',
-      true
-    > &
-      Attribute.Required;
-    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-  };
-}
-
-export interface OurMissionVisionAndValuesPageOurVisionSection
-  extends Schema.Component {
-  collectionName: 'components_our_mission_vision_and_values_page_our_vision_sections';
-  info: {
-    displayName: 'Our Vision Section';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    sectionDescription: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -275,12 +270,12 @@ declare module '@strapi/types' {
       'landing-page.speciality-carousel-item': LandingPageSpecialityCarouselItem;
       'landing-page.specialty-carousel-section': LandingPageSpecialtyCarouselSection;
       'landing-page.video-section': LandingPageVideoSection;
+      'mission-vision-values-page.our-mission': MissionVisionValuesPageOurMission;
+      'mission-vision-values-page.our-values': MissionVisionValuesPageOurValues;
+      'mission-vision-values-page.our-vision': MissionVisionValuesPageOurVision;
+      'mission-vision-values-page.values-entries': MissionVisionValuesPageValuesEntries;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
-      'our-mission-vision-and-values-page.our-mission-section': OurMissionVisionAndValuesPageOurMissionSection;
-      'our-mission-vision-and-values-page.our-value-entry': OurMissionVisionAndValuesPageOurValueEntry;
-      'our-mission-vision-and-values-page.our-values-section': OurMissionVisionAndValuesPageOurValuesSection;
-      'our-mission-vision-and-values-page.our-vision-section': OurMissionVisionAndValuesPageOurVisionSection;
       'utility.icon-link': UtilityIconLink;
       'utility.payment-option': UtilityPaymentOption;
       'utility.standard-link': UtilityStandardLink;

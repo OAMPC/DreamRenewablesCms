@@ -1,9 +1,9 @@
 {
   "kind": "singleType",
-  "collectionName": "our_mission_vision_and_values_pages",
+  "collectionName": "mission_vision_and_values_pages",
   "info": {
-    "singularName": "our-mission-vision-and-values-page",
-    "pluralName": "our-mission-vision-and-values-pages",
+    "singularName": "mission-vision-and-values-page",
+    "pluralName": "mission-vision-and-values-pages",
     "displayName": "Our Mission, Vision and Values Page",
     "description": ""
   },
@@ -21,24 +21,24 @@
       "required": true
     },
     "ourMissionSection": {
-      "displayName": "Our Mission Section",
+      "displayName": "Our Mission",
       "type": "component",
       "repeatable": false,
-      "component": "our-mission-vision-and-values-page.our-mission-section",
+      "component": "mission-vision-values-page.our-mission",
       "required": true
     },
     "ourVisionSection": {
-      "displayName": "Our Vision Section",
+      "displayName": "Our Vision",
       "type": "component",
       "repeatable": false,
-      "component": "our-mission-vision-and-values-page.our-vision-section",
+      "component": "mission-vision-values-page.our-vision",
       "required": true
     },
     "ourValuesSection": {
-      "displayName": "Our Values Section",
+      "displayName": "Our Values",
       "type": "component",
       "repeatable": false,
-      "component": "our-mission-vision-and-values-page.our-values-section",
+      "component": "mission-vision-values-page.our-values",
       "required": true
     }
   }

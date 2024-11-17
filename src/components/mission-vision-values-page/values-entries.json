@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_mission_vision_values_page_values_entries",
+  "info": {
+    "displayName": "Values Entries"
+  },
+  "options": {},
+  "attributes": {
+    "valueEntry": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
