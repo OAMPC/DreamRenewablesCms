@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_our_team_page_team_profile_details",
+  "info": {
+    "displayName": "Team Profile Details"
+  },
+  "options": {},
+  "attributes": {
+    "profileImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "profileName": {
+      "type": "string",
+      "required": true
+    },
+    "profileDescription": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

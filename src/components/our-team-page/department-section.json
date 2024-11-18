@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_our_team_page_department_sections",
+  "info": {
+    "displayName": "Department Section"
+  },
+  "options": {},
+  "attributes": {
+    "departmentSectionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "teamProfileDetails": {
+      "displayName": "Team Profile Details",
+      "type": "component",
+      "repeatable": true,
+      "component": "our-team-page.team-profile-details",
+      "required": true
+    }
+  }
+}
