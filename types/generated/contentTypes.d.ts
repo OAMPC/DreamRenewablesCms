@@ -942,6 +942,7 @@ export interface ApiOurTeamPageOurTeamPage extends Schema.SingleType {
     singularName: 'our-team-page';
     pluralName: 'our-team-pages';
     displayName: 'Our Team Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;

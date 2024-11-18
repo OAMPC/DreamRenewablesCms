@@ -225,9 +225,10 @@ export interface OurTeamPageDepartmentSection extends Schema.Component {
   collectionName: 'components_our_team_page_department_sections';
   info: {
     displayName: 'Department Section';
+    description: '';
   };
   attributes: {
-    departmentSectionTitle: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
     teamProfileDetails: Attribute.Component<
       'our-team-page.team-profile-details',
       true

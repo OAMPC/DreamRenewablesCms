@@ -1,11 +1,12 @@
 {
   "collectionName": "components_our_team_page_department_sections",
   "info": {
-    "displayName": "Department Section"
+    "displayName": "Department Section",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "departmentSectionTitle": {
+    "title": {
       "type": "string",
       "required": true
     },
