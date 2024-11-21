@@ -221,6 +221,35 @@ export interface NavigationBarDropDownLinks extends Schema.Component {
   };
 }
 
+export interface OurTeamPageDepartmentSection extends Schema.Component {
+  collectionName: 'components_our_team_page_department_sections';
+  info: {
+    displayName: 'Department Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    teamProfileDetails: Attribute.Component<
+      'our-team-page.team-profile-details',
+      true
+    > &
+      Attribute.Required;
+  };
+}
+
+export interface OurTeamPageTeamProfileDetails extends Schema.Component {
+  collectionName: 'components_our_team_page_team_profile_details';
+  info: {
+    displayName: 'Team Profile Details';
+  };
+  attributes: {
+    profileImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    profileName: Attribute.String & Attribute.Required;
+    profileDescription: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface UtilityIconLink extends Schema.Component {
   collectionName: 'components_utility_icon_links';
   info: {
@@ -276,6 +305,8 @@ declare module '@strapi/types' {
       'mission-vision-values-page.values-entries': MissionVisionValuesPageValuesEntries;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
+      'our-team-page.department-section': OurTeamPageDepartmentSection;
+      'our-team-page.team-profile-details': OurTeamPageTeamProfileDetails;
       'utility.icon-link': UtilityIconLink;
       'utility.payment-option': UtilityPaymentOption;
       'utility.standard-link': UtilityStandardLink;

@@ -936,6 +936,43 @@ export interface ApiNavigationBarNavigationBar extends Schema.SingleType {
   };
 }
 
+export interface ApiOurTeamPageOurTeamPage extends Schema.SingleType {
+  collectionName: 'our_team_pages';
+  info: {
+    singularName: 'our-team-page';
+    pluralName: 'our-team-pages';
+    displayName: 'Our Team Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pageTitle: Attribute.String & Attribute.Required;
+    pageSubTitle: Attribute.String & Attribute.Required;
+    departmentSections: Attribute.Component<
+      'our-team-page.department-section',
+      true
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-team-page.our-team-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-team-page.our-team-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -958,6 +995,7 @@ declare module '@strapi/types' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::mission-vision-and-values-page.mission-vision-and-values-page': ApiMissionVisionAndValuesPageMissionVisionAndValuesPage;
       'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
+      'api::our-team-page.our-team-page': ApiOurTeamPageOurTeamPage;
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_team_pages",
+  "info": {
+    "singularName": "our-team-page",
+    "pluralName": "our-team-pages",
+    "displayName": "Our Team Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "required": true
+    },
+    "pageSubTitle": {
+      "type": "string",
+      "required": true
+    },
+    "departmentSections": {
+      "displayName": "Department Section",
+      "type": "component",
+      "repeatable": true,
+      "component": "our-team-page.department-section",
+      "required": true
+    }
+  }
+}
