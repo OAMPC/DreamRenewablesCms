@@ -221,6 +221,19 @@ export interface NavigationBarDropDownLinks extends Schema.Component {
   };
 }
 
+export interface OurDonorsPageDonorDetail extends Schema.Component {
+  collectionName: 'components_our_donors_page_donor_details';
+  info: {
+    displayName: 'Donor Detail';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+  };
+}
+
 export interface OurTeamPageDepartmentSection extends Schema.Component {
   collectionName: 'components_our_team_page_department_sections';
   info: {
@@ -305,6 +318,7 @@ declare module '@strapi/types' {
       'mission-vision-values-page.values-entries': MissionVisionValuesPageValuesEntries;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
+      'our-donors-page.donor-detail': OurDonorsPageDonorDetail;
       'our-team-page.department-section': OurTeamPageDepartmentSection;
       'our-team-page.team-profile-details': OurTeamPageTeamProfileDetails;
       'utility.icon-link': UtilityIconLink;
