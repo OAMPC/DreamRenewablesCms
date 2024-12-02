@@ -936,6 +936,40 @@ export interface ApiNavigationBarNavigationBar extends Schema.SingleType {
   };
 }
 
+export interface ApiOurDonorsPageOurDonorsPage extends Schema.SingleType {
+  collectionName: 'our_donors_pages';
+  info: {
+    singularName: 'our-donors-page';
+    pluralName: 'our-donors-pages';
+    displayName: 'Our Donors Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pageTitle: Attribute.String & Attribute.Required;
+    pageSubTitle: Attribute.String & Attribute.Required;
+    ourDonors: Attribute.Component<'our-donors-page.donor-detail', true> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-donors-page.our-donors-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-donors-page.our-donors-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOurTeamPageOurTeamPage extends Schema.SingleType {
   collectionName: 'our_team_pages';
   info: {
@@ -995,6 +1029,7 @@ declare module '@strapi/types' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::mission-vision-and-values-page.mission-vision-and-values-page': ApiMissionVisionAndValuesPageMissionVisionAndValuesPage;
       'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
+      'api::our-donors-page.our-donors-page': ApiOurDonorsPageOurDonorsPage;
       'api::our-team-page.our-team-page': ApiOurTeamPageOurTeamPage;
     }
   }

@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_donors_pages",
+  "info": {
+    "singularName": "our-donors-page",
+    "pluralName": "our-donors-pages",
+    "displayName": "Our Donors Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "required": true
+    },
+    "pageSubTitle": {
+      "type": "string",
+      "required": true
+    },
+    "ourDonors": {
+      "displayName": "Donor Detail",
+      "type": "component",
+      "repeatable": true,
+      "component": "our-donors-page.donor-detail",
+      "required": true
+    }
+  }
+}
