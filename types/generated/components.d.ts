@@ -1,5 +1,33 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface AboutUsPageLandingImage extends Schema.Component {
+  collectionName: 'components_about_us_page_landing_images';
+  info: {
+    displayName: 'landingImage';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+  };
+}
+
+export interface AboutUsPageSection extends Schema.Component {
+  collectionName: 'components_about_us_page_sections';
+  info: {
+    displayName: 'Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    link: Attribute.Component<'utility.standard-link'> & Attribute.Required;
+    linkIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface FooterContactInformation extends Schema.Component {
   collectionName: 'components_footer_contact_informations';
   info: {
@@ -302,6 +330,8 @@ export interface UtilityStandardLink extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'about-us-page.landing-image': AboutUsPageLandingImage;
+      'about-us-page.section': AboutUsPageSection;
       'footer.contact-information': FooterContactInformation;
       'footer.navigation-links': FooterNavigationLinks;
       'footer.social-media-links': FooterSocialMediaLinks;
