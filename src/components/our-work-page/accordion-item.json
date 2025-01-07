@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_our_work_page_accordion_items",
+  "info": {
+    "displayName": "Accordion Item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "linkString": {
+      "type": "string",
+      "required": true
+    },
+    "linkSlug": {
+      "type": "string",
+      "required": true
+    },
+    "linkIcon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

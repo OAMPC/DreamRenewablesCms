@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_our_work_page_accordion_sections",
+  "info": {
+    "displayName": "Accordion Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "accordionItems": {
+      "displayName": "Accordion Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "our-work-page.accordion-item",
+      "required": true
+    }
+  }
+}
