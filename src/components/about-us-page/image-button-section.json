@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_about_us_page_image_button_sections",
+  "info": {
+    "displayName": "imageButtonSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "imageButtons": {
+      "displayName": "ImageButton",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us-page.image-button"
+    }
+  }
+}

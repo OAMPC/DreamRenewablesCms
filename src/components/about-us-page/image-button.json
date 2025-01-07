@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_about_us_page_image_buttons",
+  "info": {
+    "displayName": "ImageButton",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "subText": {
+      "type": "string",
+      "required": true
+    },
+    "linkSlug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

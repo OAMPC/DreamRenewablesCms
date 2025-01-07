@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_about_us_page_landing_images",
+  "info": {
+    "displayName": "landingImage"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
