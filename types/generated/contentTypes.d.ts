@@ -1043,6 +1043,43 @@ export interface ApiOurTeamPageOurTeamPage extends Schema.SingleType {
   };
 }
 
+export interface ApiOurWorkPageOurWorkPage extends Schema.SingleType {
+  collectionName: 'our_work_pages';
+  info: {
+    singularName: 'our-work-page';
+    pluralName: 'our-work-pages';
+    displayName: 'Our Work Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    landingImage: Attribute.Component<'our-work-page.landing-image'> &
+      Attribute.Required;
+    quote: Attribute.Component<'our-work-page.quote'> & Attribute.Required;
+    metrics: Attribute.Component<'our-work-page.metric', true> &
+      Attribute.Required;
+    accordionSection: Attribute.Component<'our-work-page.accordion-section'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-work-page.our-work-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-work-page.our-work-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1068,6 +1105,7 @@ declare module '@strapi/types' {
       'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
       'api::our-donors-page.our-donors-page': ApiOurDonorsPageOurDonorsPage;
       'api::our-team-page.our-team-page': ApiOurTeamPageOurTeamPage;
+      'api::our-work-page.our-work-page': ApiOurWorkPageOurWorkPage;
     }
   }
 }

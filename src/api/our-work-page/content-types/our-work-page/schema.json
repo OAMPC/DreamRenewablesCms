@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_work_pages",
+  "info": {
+    "singularName": "our-work-page",
+    "pluralName": "our-work-pages",
+    "displayName": "Our Work Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "landingImage": {
+      "displayName": "landingImage",
+      "type": "component",
+      "repeatable": false,
+      "component": "our-work-page.landing-image",
+      "required": true
+    },
+    "quote": {
+      "displayName": "quote",
+      "type": "component",
+      "repeatable": false,
+      "component": "our-work-page.quote",
+      "required": true
+    },
+    "metrics": {
+      "displayName": "metric",
+      "type": "component",
+      "repeatable": true,
+      "component": "our-work-page.metric",
+      "required": true
+    },
+    "accordionSection": {
+      "displayName": "Accordion Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "our-work-page.accordion-section",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_our_work_page_metrics",
+  "info": {
+    "displayName": "metric"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "valueDescription": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

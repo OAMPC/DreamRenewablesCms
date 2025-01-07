@@ -317,6 +317,71 @@ export interface OurTeamPageTeamProfileDetails extends Schema.Component {
   };
 }
 
+export interface OurWorkPageAccordionItem extends Schema.Component {
+  collectionName: 'components_our_work_page_accordion_items';
+  info: {
+    displayName: 'Accordion Item';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    linkString: Attribute.String & Attribute.Required;
+    linkSlug: Attribute.String & Attribute.Required;
+    linkIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+  };
+}
+
+export interface OurWorkPageAccordionSection extends Schema.Component {
+  collectionName: 'components_our_work_page_accordion_sections';
+  info: {
+    displayName: 'Accordion Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    accordionItems: Attribute.Component<'our-work-page.accordion-item', true> &
+      Attribute.Required;
+  };
+}
+
+export interface OurWorkPageLandingImage extends Schema.Component {
+  collectionName: 'components_our_work_page_landing_images';
+  info: {
+    displayName: 'landing Image';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    title: Attribute.String;
+  };
+}
+
+export interface OurWorkPageMetric extends Schema.Component {
+  collectionName: 'components_our_work_page_metrics';
+  info: {
+    displayName: 'metric';
+  };
+  attributes: {
+    value: Attribute.String & Attribute.Required;
+    valueDescription: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface OurWorkPageQuote extends Schema.Component {
+  collectionName: 'components_our_work_page_quotes';
+  info: {
+    displayName: 'quote';
+    description: '';
+  };
+  attributes: {
+    body: Attribute.Text & Attribute.Required;
+    author: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface UtilityIconLink extends Schema.Component {
   collectionName: 'components_utility_icon_links';
   info: {
@@ -379,6 +444,11 @@ declare module '@strapi/types' {
       'our-donors-page.donor-detail': OurDonorsPageDonorDetail;
       'our-team-page.department-section': OurTeamPageDepartmentSection;
       'our-team-page.team-profile-details': OurTeamPageTeamProfileDetails;
+      'our-work-page.accordion-item': OurWorkPageAccordionItem;
+      'our-work-page.accordion-section': OurWorkPageAccordionSection;
+      'our-work-page.landing-image': OurWorkPageLandingImage;
+      'our-work-page.metric': OurWorkPageMetric;
+      'our-work-page.quote': OurWorkPageQuote;
       'utility.icon-link': UtilityIconLink;
       'utility.payment-option': UtilityPaymentOption;
       'utility.standard-link': UtilityStandardLink;
