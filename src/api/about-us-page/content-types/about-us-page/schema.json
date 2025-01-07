@@ -4,7 +4,8 @@
   "info": {
     "singularName": "about-us-page",
     "pluralName": "about-us-pages",
-    "displayName": "About Us Page"
+    "displayName": "About Us Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,6 +24,13 @@
       "type": "component",
       "repeatable": true,
       "component": "about-us-page.section",
+      "required": true
+    },
+    "imageButtonSection": {
+      "displayName": "imageButtonSection",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us-page.image-button-section",
       "required": true
     }
   }

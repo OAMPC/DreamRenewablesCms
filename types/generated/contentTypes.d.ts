@@ -794,6 +794,7 @@ export interface ApiAboutUsPageAboutUsPage extends Schema.SingleType {
     singularName: 'about-us-page';
     pluralName: 'about-us-pages';
     displayName: 'About Us Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -802,6 +803,8 @@ export interface ApiAboutUsPageAboutUsPage extends Schema.SingleType {
     landingImage: Attribute.Component<'about-us-page.landing-image'> &
       Attribute.Required;
     sections: Attribute.Component<'about-us-page.section', true> &
+      Attribute.Required;
+    imageButtonSection: Attribute.Component<'about-us-page.image-button-section'> &
       Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

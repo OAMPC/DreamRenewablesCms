@@ -1,5 +1,31 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface AboutUsPageImageButtonSection extends Schema.Component {
+  collectionName: 'components_about_us_page_image_button_sections';
+  info: {
+    displayName: 'imageButtonSection';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    imageButtons: Attribute.Component<'about-us-page.image-button', true>;
+  };
+}
+
+export interface AboutUsPageImageButton extends Schema.Component {
+  collectionName: 'components_about_us_page_image_buttons';
+  info: {
+    displayName: 'ImageButton';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    text: Attribute.String & Attribute.Required;
+    subText: Attribute.String & Attribute.Required;
+    linkSlug: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface AboutUsPageLandingImage extends Schema.Component {
   collectionName: 'components_about_us_page_landing_images';
   info: {
@@ -330,6 +356,8 @@ export interface UtilityStandardLink extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'about-us-page.image-button-section': AboutUsPageImageButtonSection;
+      'about-us-page.image-button': AboutUsPageImageButton;
       'about-us-page.landing-image': AboutUsPageLandingImage;
       'about-us-page.section': AboutUsPageSection;
       'footer.contact-information': FooterContactInformation;
