@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_get_involved_page_payment_sections",
+  "info": {
+    "displayName": "Payment Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "paymentOptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utility.payment-option"
+    },
+    "paymentOptionIcon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

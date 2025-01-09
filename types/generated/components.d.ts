@@ -91,6 +91,50 @@ export interface FooterSocialMediaLinks extends Schema.Component {
   };
 }
 
+export interface GetInvolvedPageLandingCard extends Schema.Component {
+  collectionName: 'components_get_involved_page_landing_cards';
+  info: {
+    displayName: 'Landing Card';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+  };
+}
+
+export interface GetInvolvedPagePaymentSection extends Schema.Component {
+  collectionName: 'components_get_involved_page_payment_sections';
+  info: {
+    displayName: 'Payment Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    subTitle: Attribute.String;
+    paymentOptions: Attribute.Component<'utility.payment-option', true>;
+    paymentOptionIcon: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Attribute.Required;
+  };
+}
+
+export interface GetInvolvedPageSections extends Schema.Component {
+  collectionName: 'components_get_involved_page_sections';
+  info: {
+    displayName: 'Sections';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    link: Attribute.Component<'utility.standard-link'>;
+    linkIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface LandingPageInitialImage extends Schema.Component {
   collectionName: 'components_landing_page_initial_images';
   info: {
@@ -428,6 +472,9 @@ declare module '@strapi/types' {
       'footer.contact-information': FooterContactInformation;
       'footer.navigation-links': FooterNavigationLinks;
       'footer.social-media-links': FooterSocialMediaLinks;
+      'get-involved-page.landing-card': GetInvolvedPageLandingCard;
+      'get-involved-page.payment-section': GetInvolvedPagePaymentSection;
+      'get-involved-page.sections': GetInvolvedPageSections;
       'landing-page.initial-image': LandingPageInitialImage;
       'landing-page.payment-section': LandingPagePaymentSection;
       'landing-page.quote-carousel-item': LandingPageQuoteCarouselItem;
