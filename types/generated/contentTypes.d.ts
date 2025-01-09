@@ -863,6 +863,42 @@ export interface ApiFooterFooter extends Schema.SingleType {
   };
 }
 
+export interface ApiGetInvolvedPageGetInvolvedPage extends Schema.SingleType {
+  collectionName: 'get_involved_pages';
+  info: {
+    singularName: 'get-involved-page';
+    pluralName: 'get-involved-pages';
+    displayName: 'Get Involved Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    landingCard: Attribute.Component<'get-involved-page.landing-card'> &
+      Attribute.Required;
+    sections: Attribute.Component<'get-involved-page.sections', true> &
+      Attribute.Required;
+    paymentSection: Attribute.Component<'get-involved-page.payment-section'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::get-involved-page.get-involved-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::get-involved-page.get-involved-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Schema.SingleType {
   collectionName: 'landing_pages';
   info: {
@@ -1100,6 +1136,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us-page.about-us-page': ApiAboutUsPageAboutUsPage;
       'api::footer.footer': ApiFooterFooter;
+      'api::get-involved-page.get-involved-page': ApiGetInvolvedPageGetInvolvedPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::mission-vision-and-values-page.mission-vision-and-values-page': ApiMissionVisionAndValuesPageMissionVisionAndValuesPage;
       'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;

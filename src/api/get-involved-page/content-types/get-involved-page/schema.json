@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "get_involved_pages",
+  "info": {
+    "singularName": "get-involved-page",
+    "pluralName": "get-involved-pages",
+    "displayName": "Get Involved Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "landingCard": {
+      "displayName": "Landing Card",
+      "type": "component",
+      "repeatable": false,
+      "component": "get-involved-page.landing-card",
+      "required": true
+    },
+    "sections": {
+      "displayName": "Sections",
+      "type": "component",
+      "repeatable": true,
+      "component": "get-involved-page.sections",
+      "required": true
+    },
+    "paymentSection": {
+      "displayName": "Payment Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "get-involved-page.payment-section",
+      "required": true
+    }
+  }
+}

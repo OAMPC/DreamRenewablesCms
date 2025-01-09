@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_get_involved_page_landing_cards",
+  "info": {
+    "displayName": "Landing Card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
