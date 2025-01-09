@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_donate_page_landing_cards",
+  "info": {
+    "displayName": "Landing Card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

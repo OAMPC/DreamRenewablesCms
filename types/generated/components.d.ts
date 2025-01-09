@@ -54,6 +54,46 @@ export interface AboutUsPageSection extends Schema.Component {
   };
 }
 
+export interface DonatePageLandingCard extends Schema.Component {
+  collectionName: 'components_donate_page_landing_cards';
+  info: {
+    displayName: 'Landing Card';
+  };
+  attributes: {
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface DonatePageMetric extends Schema.Component {
+  collectionName: 'components_donate_page_metrics';
+  info: {
+    displayName: 'Metric';
+  };
+  attributes: {
+    value: Attribute.String & Attribute.Required;
+    valueDescription: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface DonatePagePaymentSection extends Schema.Component {
+  collectionName: 'components_donate_page_payment_sections';
+  info: {
+    displayName: 'Payment Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    subTitle: Attribute.Text & Attribute.Required;
+    paymentOptions: Attribute.Component<'utility.payment-option', true>;
+    paymentOptionIcon: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Attribute.Required;
+  };
+}
+
 export interface FooterContactInformation extends Schema.Component {
   collectionName: 'components_footer_contact_informations';
   info: {
@@ -469,6 +509,9 @@ declare module '@strapi/types' {
       'about-us-page.image-button': AboutUsPageImageButton;
       'about-us-page.landing-image': AboutUsPageLandingImage;
       'about-us-page.section': AboutUsPageSection;
+      'donate-page.landing-card': DonatePageLandingCard;
+      'donate-page.metric': DonatePageMetric;
+      'donate-page.payment-section': DonatePagePaymentSection;
       'footer.contact-information': FooterContactInformation;
       'footer.navigation-links': FooterNavigationLinks;
       'footer.social-media-links': FooterSocialMediaLinks;
