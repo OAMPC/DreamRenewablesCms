@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_donate_page_payment_sections",
+  "info": {
+    "displayName": "Payment Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subTitle": {
+      "type": "text",
+      "required": true
+    },
+    "paymentOptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utility.payment-option"
+    },
+    "paymentOptionIcon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

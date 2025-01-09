@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "donate_pages",
+  "info": {
+    "singularName": "donate-page",
+    "pluralName": "donate-pages",
+    "displayName": "Donate Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "landingCard": {
+      "displayName": "Landing Card",
+      "type": "component",
+      "repeatable": false,
+      "component": "donate-page.landing-card",
+      "required": true
+    },
+    "preMetricText": {
+      "type": "text",
+      "required": true
+    },
+    "metrics": {
+      "displayName": "Metric",
+      "type": "component",
+      "repeatable": true,
+      "component": "donate-page.metric",
+      "required": true
+    },
+    "postMetricText": {
+      "type": "text",
+      "required": true
+    },
+    "paymentSection": {
+      "displayName": "Payment Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "donate-page.payment-section",
+      "required": true
+    }
+  }
+}

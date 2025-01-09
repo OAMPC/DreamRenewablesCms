@@ -824,6 +824,44 @@ export interface ApiAboutUsPageAboutUsPage extends Schema.SingleType {
   };
 }
 
+export interface ApiDonatePageDonatePage extends Schema.SingleType {
+  collectionName: 'donate_pages';
+  info: {
+    singularName: 'donate-page';
+    pluralName: 'donate-pages';
+    displayName: 'Donate Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    landingCard: Attribute.Component<'donate-page.landing-card'> &
+      Attribute.Required;
+    preMetricText: Attribute.Text & Attribute.Required;
+    metrics: Attribute.Component<'donate-page.metric', true> &
+      Attribute.Required;
+    postMetricText: Attribute.Text & Attribute.Required;
+    paymentSection: Attribute.Component<'donate-page.payment-section'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::donate-page.donate-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::donate-page.donate-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -1135,6 +1173,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us-page.about-us-page': ApiAboutUsPageAboutUsPage;
+      'api::donate-page.donate-page': ApiDonatePageDonatePage;
       'api::footer.footer': ApiFooterFooter;
       'api::get-involved-page.get-involved-page': ApiGetInvolvedPageGetInvolvedPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
