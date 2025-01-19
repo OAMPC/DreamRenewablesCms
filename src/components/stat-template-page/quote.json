@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_stat_template_page_quotes",
+  "info": {
+    "displayName": "Quote"
+  },
+  "options": {},
+  "attributes": {
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

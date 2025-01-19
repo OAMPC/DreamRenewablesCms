@@ -466,6 +466,40 @@ export interface OurWorkPageQuote extends Schema.Component {
   };
 }
 
+export interface StatTemplatePageLandingImage extends Schema.Component {
+  collectionName: 'components_stat_template_page_landing_images';
+  info: {
+    displayName: 'Landing Image';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+  };
+}
+
+export interface StatTemplatePageMetric extends Schema.Component {
+  collectionName: 'components_stat_template_page_metrics';
+  info: {
+    displayName: 'Metric';
+  };
+  attributes: {
+    value: Attribute.String & Attribute.Required;
+    valueDescription: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface StatTemplatePageQuote extends Schema.Component {
+  collectionName: 'components_stat_template_page_quotes';
+  info: {
+    displayName: 'Quote';
+  };
+  attributes: {
+    author: Attribute.String & Attribute.Required;
+    body: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface UtilityIconLink extends Schema.Component {
   collectionName: 'components_utility_icon_links';
   info: {
@@ -539,6 +573,9 @@ declare module '@strapi/types' {
       'our-work-page.landing-image': OurWorkPageLandingImage;
       'our-work-page.metric': OurWorkPageMetric;
       'our-work-page.quote': OurWorkPageQuote;
+      'stat-template-page.landing-image': StatTemplatePageLandingImage;
+      'stat-template-page.metric': StatTemplatePageMetric;
+      'stat-template-page.quote': StatTemplatePageQuote;
       'utility.icon-link': UtilityIconLink;
       'utility.payment-option': UtilityPaymentOption;
       'utility.standard-link': UtilityStandardLink;
