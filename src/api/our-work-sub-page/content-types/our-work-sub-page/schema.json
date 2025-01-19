@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_work_sub_pages",
+  "info": {
+    "singularName": "our-work-sub-page",
+    "pluralName": "our-work-sub-pages",
+    "displayName": "Our Work Sub-Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "landingImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "stat-template-page.landing-image",
+      "required": true
+    },
+    "quote": {
+      "type": "component",
+      "repeatable": false,
+      "component": "stat-template-page.quote",
+      "required": true
+    },
+    "metrics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "stat-template-page.metric",
+      "required": true
+    },
+    "freeText": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
