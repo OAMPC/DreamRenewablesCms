@@ -30,13 +30,13 @@
       "component": "stat-template-page.metric",
       "required": true
     },
-    "freeText": {
-      "type": "text",
-      "required": true
-    },
     "url": {
       "type": "string",
       "unique": true,
+      "required": true
+    },
+    "freeText": {
+      "type": "richtext",
       "required": true
     }
   }
