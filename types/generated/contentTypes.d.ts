@@ -1160,6 +1160,7 @@ export interface ApiOurWorkSubPageOurWorkSubPage extends Schema.CollectionType {
     singularName: 'our-work-sub-page';
     pluralName: 'our-work-sub-pages';
     displayName: 'Our Work Sub-Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1170,7 +1171,8 @@ export interface ApiOurWorkSubPageOurWorkSubPage extends Schema.CollectionType {
     quote: Attribute.Component<'stat-template-page.quote'> & Attribute.Required;
     metrics: Attribute.Component<'stat-template-page.metric', true> &
       Attribute.Required;
-    freeText: Attribute.Text & Attribute.Required;
+    url: Attribute.String & Attribute.Required & Attribute.Unique;
+    freeText: Attribute.RichText & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

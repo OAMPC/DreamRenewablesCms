@@ -4,7 +4,8 @@
   "info": {
     "singularName": "our-work-sub-page",
     "pluralName": "our-work-sub-pages",
-    "displayName": "Our Work Sub-Page"
+    "displayName": "Our Work Sub-Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -29,8 +30,13 @@
       "component": "stat-template-page.metric",
       "required": true
     },
+    "url": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
     "freeText": {
-      "type": "text",
+      "type": "richtext",
       "required": true
     }
   }
