@@ -32,7 +32,7 @@ This project requires the following pre-requisites:
 
 1. Clone the repo to your chosen directory
 2. Install dependencies `npm i`
-3. Create a .env file in the project root directory: `touch .env`
+3. Create a .env file in the project root directory: e.g `touch .env`
    - Secrets can be sourced from Heroku or a project admin
 4. Build the admin panel with: `npm run build`
 
@@ -44,7 +44,7 @@ To run the application you must ensure you've followed the setup steps
 
 - To run the app via Node:
   - Ensure you're in the root directory
-  - spin up the application: `npm run develop`
+  - spin up the application: `npm run dev`
 
 ## Continuous Integration, Development and Deployment
 
