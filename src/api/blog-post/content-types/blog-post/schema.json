@@ -35,6 +35,11 @@
     "author": {
       "type": "string",
       "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
