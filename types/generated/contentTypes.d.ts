@@ -836,10 +836,11 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
     blogPostBody: Attribute.RichText & Attribute.Required;
     blogPostSummary: Attribute.Text & Attribute.Required;
     landingImage: Attribute.Media<'images'> & Attribute.Required;
+    author: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
