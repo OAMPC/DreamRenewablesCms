@@ -1207,7 +1207,7 @@ export interface ApiOurWorkSubPageOurWorkSubPage extends Schema.CollectionType {
     quote: Attribute.Component<'stat-template-page.quote'> & Attribute.Required;
     metrics: Attribute.Component<'stat-template-page.metric', true> &
       Attribute.Required;
-    url: Attribute.String & Attribute.Required & Attribute.Unique;
+    url: Attribute.String & Attribute.Required;
     freeText: Attribute.RichText & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
