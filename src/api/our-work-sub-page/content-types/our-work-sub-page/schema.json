@@ -33,7 +33,8 @@
     "url": {
       "type": "string",
       "unique": true,
-      "required": true
+      "required": true,
+      "regex": "^[a-z]+(-[a-z]+)*$"
     },
     "freeText": {
       "type": "richtext",

@@ -824,6 +824,42 @@ export interface ApiAboutUsPageAboutUsPage extends Schema.SingleType {
   };
 }
 
+export interface ApiBlogPostBlogPost extends Schema.CollectionType {
+  collectionName: 'blog_posts';
+  info: {
+    singularName: 'blog-post';
+    pluralName: 'blog-posts';
+    displayName: 'Blog Post';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    blogPostBody: Attribute.RichText & Attribute.Required;
+    blogPostSummary: Attribute.Text & Attribute.Required;
+    landingImage: Attribute.Media<'images'> & Attribute.Required;
+    author: Attribute.String & Attribute.Required;
+    url: Attribute.String & Attribute.Required & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-post.blog-post',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-post.blog-post',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDonatePageDonatePage extends Schema.SingleType {
   collectionName: 'donate_pages';
   info: {
@@ -1210,6 +1246,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us-page.about-us-page': ApiAboutUsPageAboutUsPage;
+      'api::blog-post.blog-post': ApiBlogPostBlogPost;
       'api::donate-page.donate-page': ApiDonatePageDonatePage;
       'api::footer.footer': ApiFooterFooter;
       'api::get-involved-page.get-involved-page': ApiGetInvolvedPageGetInvolvedPage;
