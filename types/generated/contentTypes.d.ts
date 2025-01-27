@@ -944,6 +944,7 @@ export interface ApiFundraisingEventFundraisingEvent
     singularName: 'fundraising-event';
     pluralName: 'fundraising-events';
     displayName: 'Fundraising Event';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -954,6 +955,8 @@ export interface ApiFundraisingEventFundraisingEvent
     eventTitle: Attribute.String & Attribute.Required;
     eventDescription: Attribute.RichText & Attribute.Required;
     contactEmail: Attribute.String;
+    url: Attribute.String & Attribute.Required;
+    SignUp: Attribute.Component<'sign-up.sign-up'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

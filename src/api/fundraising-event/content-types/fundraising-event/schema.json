@@ -4,7 +4,8 @@
   "info": {
     "singularName": "fundraising-event",
     "pluralName": "fundraising-events",
-    "displayName": "Fundraising Event"
+    "displayName": "Fundraising Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,12 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "landingImage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "eventDate": {
       "type": "string",
@@ -33,6 +34,17 @@
     },
     "contactEmail": {
       "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z]+(-[a-z]+)*$"
+    },
+    "SignUp": {
+      "displayName": "Sign Up",
+      "type": "component",
+      "repeatable": false,
+      "component": "sign-up.sign-up"
     }
   }
 }

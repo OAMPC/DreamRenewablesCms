@@ -466,6 +466,17 @@ export interface OurWorkPageQuote extends Schema.Component {
   };
 }
 
+export interface SignUpSignUp extends Schema.Component {
+  collectionName: 'components_sign_up_sign_ups';
+  info: {
+    displayName: 'Sign Up';
+  };
+  attributes: {
+    title: Attribute.String;
+    signUpLink: Attribute.String;
+  };
+}
+
 export interface StatTemplatePageLandingImage extends Schema.Component {
   collectionName: 'components_stat_template_page_landing_images';
   info: {
@@ -573,6 +584,7 @@ declare module '@strapi/types' {
       'our-work-page.landing-image': OurWorkPageLandingImage;
       'our-work-page.metric': OurWorkPageMetric;
       'our-work-page.quote': OurWorkPageQuote;
+      'sign-up.sign-up': SignUpSignUp;
       'stat-template-page.landing-image': StatTemplatePageLandingImage;
       'stat-template-page.metric': StatTemplatePageMetric;
       'stat-template-page.quote': StatTemplatePageQuote;

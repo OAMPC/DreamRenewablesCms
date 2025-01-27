@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sign_up_sign_ups",
+  "info": {
+    "displayName": "Sign Up"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "signUpLink": {
+      "type": "string"
+    }
+  }
+}
