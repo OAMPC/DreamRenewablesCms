@@ -1,7 +1,8 @@
 {
   "collectionName": "components_sign_up_sign_ups",
   "info": {
-    "displayName": "Sign Up"
+    "displayName": "Sign Up Info",
+    "description": ""
   },
   "options": {},
   "attributes": {

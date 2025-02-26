@@ -466,10 +466,11 @@ export interface OurWorkPageQuote extends Schema.Component {
   };
 }
 
-export interface SignUpSignUp extends Schema.Component {
+export interface SignUpInfoSignUp extends Schema.Component {
   collectionName: 'components_sign_up_sign_ups';
   info: {
-    displayName: 'Sign Up';
+    displayName: 'Sign Up Info';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
@@ -584,7 +585,7 @@ declare module '@strapi/types' {
       'our-work-page.landing-image': OurWorkPageLandingImage;
       'our-work-page.metric': OurWorkPageMetric;
       'our-work-page.quote': OurWorkPageQuote;
-      'sign-up.sign-up': SignUpSignUp;
+      'sign-up-info.sign-up': SignUpInfoSignUp;
       'stat-template-page.landing-image': StatTemplatePageLandingImage;
       'stat-template-page.metric': StatTemplatePageMetric;
       'stat-template-page.quote': StatTemplatePageQuote;

@@ -40,11 +40,11 @@
       "required": true,
       "regex": "^[a-z]+(-[a-z]+)*$"
     },
-    "SignUp": {
+    "signUpInfo": {
       "displayName": "Sign Up",
       "type": "component",
       "repeatable": false,
-      "component": "sign-up.sign-up"
+      "component": "sign-up-info.sign-up"
     }
   }
 }

@@ -956,7 +956,7 @@ export interface ApiFundraisingEventFundraisingEvent
     eventDescription: Attribute.RichText & Attribute.Required;
     contactEmail: Attribute.String;
     url: Attribute.String & Attribute.Required;
-    SignUp: Attribute.Component<'sign-up.sign-up'>;
+    signUpInfo: Attribute.Component<'sign-up-info.sign-up'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
