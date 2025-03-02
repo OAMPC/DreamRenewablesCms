@@ -1,7 +1,8 @@
 {
   "collectionName": "components_mission_vision_values_page_our_visions",
   "info": {
-    "displayName": "Our Vision"
+    "displayName": "Our Vision",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,29 +11,29 @@
       "required": true
     },
     "titleIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "sectionImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "sectionDescription": {
-      "type": "text",
+      "type": "richtext",
       "required": true
     }
   }
