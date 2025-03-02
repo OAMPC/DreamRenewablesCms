@@ -1,7 +1,8 @@
 {
   "collectionName": "components_mission_vision_values_page_our_values",
   "info": {
-    "displayName": "Our Values"
+    "displayName": "Our Values",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,32 +11,18 @@
       "required": true
     },
     "titleIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "ourValuesEntries": {
-      "displayName": "Values Entries",
-      "type": "component",
-      "repeatable": true,
-      "component": "mission-vision-values-page.values-entries",
-      "required": true
-    },
-    "sectionImage": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false,
+      "type": "richtext",
       "required": true
     }
   }
