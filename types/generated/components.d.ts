@@ -279,6 +279,7 @@ export interface MissionVisionValuesPageOurMission extends Schema.Component {
   collectionName: 'components_mission_vision_values_page_our_missions';
   info: {
     displayName: 'Our Mission';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -286,7 +287,7 @@ export interface MissionVisionValuesPageOurMission extends Schema.Component {
       Attribute.Required;
     sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
-    sectionDescription: Attribute.Text;
+    sectionDescription: Attribute.RichText & Attribute.Required;
   };
 }
 
@@ -294,18 +295,13 @@ export interface MissionVisionValuesPageOurValues extends Schema.Component {
   collectionName: 'components_mission_vision_values_page_our_values';
   info: {
     displayName: 'Our Values';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
     titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
-    ourValuesEntries: Attribute.Component<
-      'mission-vision-values-page.values-entries',
-      true
-    > &
-      Attribute.Required;
-    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
+    ourValuesEntries: Attribute.RichText & Attribute.Required;
   };
 }
 
@@ -313,6 +309,7 @@ export interface MissionVisionValuesPageOurVision extends Schema.Component {
   collectionName: 'components_mission_vision_values_page_our_visions';
   info: {
     displayName: 'Our Vision';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -320,17 +317,7 @@ export interface MissionVisionValuesPageOurVision extends Schema.Component {
       Attribute.Required;
     sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
-    sectionDescription: Attribute.Text & Attribute.Required;
-  };
-}
-
-export interface MissionVisionValuesPageValuesEntries extends Schema.Component {
-  collectionName: 'components_mission_vision_values_page_values_entries';
-  info: {
-    displayName: 'Values Entries';
-  };
-  attributes: {
-    valueEntry: Attribute.String & Attribute.Required;
+    sectionDescription: Attribute.RichText & Attribute.Required;
   };
 }
 
@@ -574,7 +561,6 @@ declare module '@strapi/types' {
       'mission-vision-values-page.our-mission': MissionVisionValuesPageOurMission;
       'mission-vision-values-page.our-values': MissionVisionValuesPageOurValues;
       'mission-vision-values-page.our-vision': MissionVisionValuesPageOurVision;
-      'mission-vision-values-page.values-entries': MissionVisionValuesPageValuesEntries;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
       'our-donors-page.donor-detail': OurDonorsPageDonorDetail;
