@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_mission_vision_values_page_our_missions",
+  "collectionName": "components_our_mission_vision_and_values_page_our_mission_vision_and_values_pages",
   "info": {
-    "displayName": "Our Mission",
+    "displayName": "Section",
     "description": ""
   },
   "options": {},
@@ -11,17 +11,6 @@
       "required": true
     },
     "titleIcon": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "sectionImage": {
       "type": "media",
       "multiple": false,
       "required": true,
