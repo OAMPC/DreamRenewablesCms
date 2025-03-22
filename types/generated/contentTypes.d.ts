@@ -1022,13 +1022,12 @@ export interface ApiMissionVisionAndValuesPageMissionVisionAndValuesPage
     draftAndPublish: true;
   };
   attributes: {
-    pageTitle: Attribute.String & Attribute.Required;
-    pageSubTitle: Attribute.String & Attribute.Required;
-    ourMissionSection: Attribute.Component<'mission-vision-values-page.our-mission'> &
+    sections: Attribute.Component<
+      'our-mission-vision-and-values-page.our-mission-vision-and-values-page',
+      true
+    > &
       Attribute.Required;
-    ourVisionSection: Attribute.Component<'mission-vision-values-page.our-vision'> &
-      Attribute.Required;
-    ourValuesSection: Attribute.Component<'mission-vision-values-page.our-values'> &
+    landingCard: Attribute.Component<'our-mission-vision-and-values-page.landing-card'> &
       Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

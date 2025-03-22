@@ -12,33 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "pageTitle": {
-      "type": "string",
+    "sections": {
+      "displayName": "Our-mission-vision-and-values-page",
+      "type": "component",
+      "repeatable": true,
+      "component": "our-mission-vision-and-values-page.our-mission-vision-and-values-page",
       "required": true
     },
-    "pageSubTitle": {
-      "type": "string",
-      "required": true
-    },
-    "ourMissionSection": {
-      "displayName": "Our Mission",
+    "landingCard": {
+      "displayName": "Landing Card",
       "type": "component",
       "repeatable": false,
-      "component": "mission-vision-values-page.our-mission",
-      "required": true
-    },
-    "ourVisionSection": {
-      "displayName": "Our Vision",
-      "type": "component",
-      "repeatable": false,
-      "component": "mission-vision-values-page.our-vision",
-      "required": true
-    },
-    "ourValuesSection": {
-      "displayName": "Our Values",
-      "type": "component",
-      "repeatable": false,
-      "component": "mission-vision-values-page.our-values",
+      "component": "our-mission-vision-and-values-page.landing-card",
       "required": true
     }
   }

@@ -275,52 +275,6 @@ export interface LandingPageVideoSection extends Schema.Component {
   };
 }
 
-export interface MissionVisionValuesPageOurMission extends Schema.Component {
-  collectionName: 'components_mission_vision_values_page_our_missions';
-  info: {
-    displayName: 'Our Mission';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    sectionDescription: Attribute.RichText & Attribute.Required;
-  };
-}
-
-export interface MissionVisionValuesPageOurValues extends Schema.Component {
-  collectionName: 'components_mission_vision_values_page_our_values';
-  info: {
-    displayName: 'Our Values';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    ourValuesEntries: Attribute.RichText & Attribute.Required;
-  };
-}
-
-export interface MissionVisionValuesPageOurVision extends Schema.Component {
-  collectionName: 'components_mission_vision_values_page_our_visions';
-  info: {
-    displayName: 'Our Vision';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    sectionImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    sectionDescription: Attribute.RichText & Attribute.Required;
-  };
-}
-
 export interface NavigationBarButton extends Schema.Component {
   collectionName: 'components_navigation_bar_buttons';
   info: {
@@ -356,6 +310,33 @@ export interface OurDonorsPageDonorDetail extends Schema.Component {
     description: Attribute.Text & Attribute.Required;
     logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
+  };
+}
+
+export interface OurMissionVisionAndValuesPageLandingCard
+  extends Schema.Component {
+  collectionName: 'components_our_mission_vision_and_values_page_landing_cards';
+  info: {
+    displayName: 'Landing Card';
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface OurMissionVisionAndValuesPageOurMissionVisionAndValuesPage
+  extends Schema.Component {
+  collectionName: 'components_our_mission_vision_and_values_page_our_mission_vision_and_values_pages';
+  info: {
+    displayName: 'Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    sectionDescription: Attribute.RichText & Attribute.Required;
   };
 }
 
@@ -546,12 +527,11 @@ declare module '@strapi/types' {
       'landing-page.speciality-carousel-item': LandingPageSpecialityCarouselItem;
       'landing-page.specialty-carousel-section': LandingPageSpecialtyCarouselSection;
       'landing-page.video-section': LandingPageVideoSection;
-      'mission-vision-values-page.our-mission': MissionVisionValuesPageOurMission;
-      'mission-vision-values-page.our-values': MissionVisionValuesPageOurValues;
-      'mission-vision-values-page.our-vision': MissionVisionValuesPageOurVision;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
       'our-donors-page.donor-detail': OurDonorsPageDonorDetail;
+      'our-mission-vision-and-values-page.landing-card': OurMissionVisionAndValuesPageLandingCard;
+      'our-mission-vision-and-values-page.our-mission-vision-and-values-page': OurMissionVisionAndValuesPageOurMissionVisionAndValuesPage;
       'our-team-page.department-section': OurTeamPageDepartmentSection;
       'our-team-page.team-profile-details': OurTeamPageTeamProfileDetails;
       'our-work-page.accordion-item': OurWorkPageAccordionItem;

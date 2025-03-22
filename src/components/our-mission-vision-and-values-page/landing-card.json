@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_our_mission_vision_and_values_page_landing_cards",
+  "info": {
+    "displayName": "Landing Card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
