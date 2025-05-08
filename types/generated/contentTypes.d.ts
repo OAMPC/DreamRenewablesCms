@@ -937,6 +937,44 @@ export interface ApiFooterFooter extends Schema.SingleType {
   };
 }
 
+export interface ApiFundraisingEventFundraisingEvent
+  extends Schema.CollectionType {
+  collectionName: 'fundraising_events';
+  info: {
+    singularName: 'fundraising-event';
+    pluralName: 'fundraising-events';
+    displayName: 'Fundraising Event';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    landingImage: Attribute.Media<'images'> & Attribute.Required;
+    eventDate: Attribute.String & Attribute.Required;
+    eventTitle: Attribute.String & Attribute.Required;
+    eventDescription: Attribute.RichText & Attribute.Required;
+    contactEmail: Attribute.String;
+    url: Attribute.String & Attribute.Required;
+    signUpInfo: Attribute.Component<'sign-up-info.sign-up'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::fundraising-event.fundraising-event',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::fundraising-event.fundraising-event',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGetInvolvedPageGetInvolvedPage extends Schema.SingleType {
   collectionName: 'get_involved_pages';
   info: {
@@ -1248,6 +1286,7 @@ declare module '@strapi/types' {
       'api::blog-post.blog-post': ApiBlogPostBlogPost;
       'api::donate-page.donate-page': ApiDonatePageDonatePage;
       'api::footer.footer': ApiFooterFooter;
+      'api::fundraising-event.fundraising-event': ApiFundraisingEventFundraisingEvent;
       'api::get-involved-page.get-involved-page': ApiGetInvolvedPageGetInvolvedPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::mission-vision-and-values-page.mission-vision-and-values-page': ApiMissionVisionAndValuesPageMissionVisionAndValuesPage;

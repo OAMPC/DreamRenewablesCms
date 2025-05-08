@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fundraising_events",
+  "info": {
+    "singularName": "fundraising-event",
+    "pluralName": "fundraising-events",
+    "displayName": "Fundraising Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "landingImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "eventDate": {
+      "type": "string",
+      "required": true
+    },
+    "eventTitle": {
+      "type": "string",
+      "required": true
+    },
+    "eventDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "contactEmail": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z]+(-[a-z]+)*$"
+    },
+    "signUpInfo": {
+      "displayName": "Sign Up",
+      "type": "component",
+      "repeatable": false,
+      "component": "sign-up-info.sign-up"
+    }
+  }
+}
