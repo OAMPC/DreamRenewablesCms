@@ -13,10 +13,10 @@
   "pluginOptions": {},
   "attributes": {
     "sections": {
-      "displayName": "Our-mission-vision-and-values-page",
+      "displayName": "Section",
       "type": "component",
       "repeatable": true,
-      "component": "omvvp.our-mission-vision-and-values-page",
+      "component": "omvvp.section",
       "required": true
     },
     "landingCard": {
