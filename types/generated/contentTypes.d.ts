@@ -1060,11 +1060,7 @@ export interface ApiMissionVisionAndValuesPageMissionVisionAndValuesPage
     draftAndPublish: true;
   };
   attributes: {
-    sections: Attribute.Component<
-      'omvvp.our-mission-vision-and-values-page',
-      true
-    > &
-      Attribute.Required;
+    sections: Attribute.Component<'omvvp.section', true> & Attribute.Required;
     landingCard: Attribute.Component<'omvvp.landing-card'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

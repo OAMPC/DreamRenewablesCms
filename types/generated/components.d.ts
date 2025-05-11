@@ -301,22 +301,21 @@ export interface NavigationBarDropDownLinks extends Schema.Component {
 }
 
 export interface OmvvpLandingCard extends Schema.Component {
-  collectionName: 'components_our_mission_vision_and_values_page_landing_cards';
+  collectionName: 'components_omvvp_landing_cards';
   info: {
     displayName: 'Landing Card';
-    description: '';
   };
   attributes: {
-    title: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
   };
 }
 
-export interface OmvvpOurMissionVisionAndValuesPage extends Schema.Component {
-  collectionName: 'components_our_mission_vision_and_values_page_our_mission_vision_and_values_pages';
+export interface OmvvpSection extends Schema.Component {
+  collectionName: 'components_omvvp_sections';
   info: {
     displayName: 'Section';
-    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -541,7 +540,7 @@ declare module '@strapi/types' {
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
       'omvvp.landing-card': OmvvpLandingCard;
-      'omvvp.our-mission-vision-and-values-page': OmvvpOurMissionVisionAndValuesPage;
+      'omvvp.section': OmvvpSection;
       'our-donors-page.donor-detail': OurDonorsPageDonorDetail;
       'our-team-page.department-section': OurTeamPageDepartmentSection;
       'our-team-page.team-profile-details': OurTeamPageTeamProfileDetails;

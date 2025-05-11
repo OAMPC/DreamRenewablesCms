@@ -1,24 +1,24 @@
 {
-  "collectionName": "components_our_mission_vision_and_values_page_landing_cards",
+  "collectionName": "components_omvvp_landing_cards",
   "info": {
-    "displayName": "Landing Card",
-    "description": ""
+    "displayName": "Landing Card"
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
