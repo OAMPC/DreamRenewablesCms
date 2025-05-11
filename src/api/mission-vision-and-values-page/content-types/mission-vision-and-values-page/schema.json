@@ -16,14 +16,14 @@
       "displayName": "Our-mission-vision-and-values-page",
       "type": "component",
       "repeatable": true,
-      "component": "our-mission-vision-and-values-page.our-mission-vision-and-values-page",
+      "component": "omvvp.our-mission-vision-and-values-page",
       "required": true
     },
     "landingCard": {
       "displayName": "Landing Card",
       "type": "component",
       "repeatable": false,
-      "component": "our-mission-vision-and-values-page.landing-card",
+      "component": "omvvp.landing-card",
       "required": true
     }
   }

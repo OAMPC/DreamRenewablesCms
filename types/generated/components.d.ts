@@ -300,24 +300,11 @@ export interface NavigationBarDropDownLinks extends Schema.Component {
   };
 }
 
-export interface OurDonorsPageDonorDetail extends Schema.Component {
-  collectionName: 'components_our_donors_page_donor_details';
-  info: {
-    displayName: 'Donor Detail';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    description: Attribute.Text & Attribute.Required;
-    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-  };
-}
-
-export interface OurMissionVisionAndValuesPageLandingCard
-  extends Schema.Component {
+export interface OmvvpLandingCard extends Schema.Component {
   collectionName: 'components_our_mission_vision_and_values_page_landing_cards';
   info: {
     displayName: 'Landing Card';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
@@ -325,8 +312,7 @@ export interface OurMissionVisionAndValuesPageLandingCard
   };
 }
 
-export interface OurMissionVisionAndValuesPageOurMissionVisionAndValuesPage
-  extends Schema.Component {
+export interface OmvvpOurMissionVisionAndValuesPage extends Schema.Component {
   collectionName: 'components_our_mission_vision_and_values_page_our_mission_vision_and_values_pages';
   info: {
     displayName: 'Section';
@@ -337,6 +323,19 @@ export interface OurMissionVisionAndValuesPageOurMissionVisionAndValuesPage
     titleIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
     sectionDescription: Attribute.RichText & Attribute.Required;
+  };
+}
+
+export interface OurDonorsPageDonorDetail extends Schema.Component {
+  collectionName: 'components_our_donors_page_donor_details';
+  info: {
+    displayName: 'Donor Detail';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
   };
 }
 
@@ -541,9 +540,9 @@ declare module '@strapi/types' {
       'landing-page.video-section': LandingPageVideoSection;
       'navigation-bar.button': NavigationBarButton;
       'navigation-bar.drop-down-links': NavigationBarDropDownLinks;
+      'omvvp.landing-card': OmvvpLandingCard;
+      'omvvp.our-mission-vision-and-values-page': OmvvpOurMissionVisionAndValuesPage;
       'our-donors-page.donor-detail': OurDonorsPageDonorDetail;
-      'our-mission-vision-and-values-page.landing-card': OurMissionVisionAndValuesPageLandingCard;
-      'our-mission-vision-and-values-page.our-mission-vision-and-values-page': OurMissionVisionAndValuesPageOurMissionVisionAndValuesPage;
       'our-team-page.department-section': OurTeamPageDepartmentSection;
       'our-team-page.team-profile-details': OurTeamPageTeamProfileDetails;
       'our-work-page.accordion-item': OurWorkPageAccordionItem;
