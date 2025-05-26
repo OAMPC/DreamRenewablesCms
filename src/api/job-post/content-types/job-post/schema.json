@@ -26,7 +26,7 @@
     },
     "landingImage": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "allowedTypes": [
         "images",
@@ -46,6 +46,11 @@
     },
     "isVolunteeringOpportunity": {
       "type": "boolean",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "unique": true,
       "required": true
     }
   }

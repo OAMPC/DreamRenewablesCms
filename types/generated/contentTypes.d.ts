@@ -1026,14 +1026,12 @@ export interface ApiJobPostJobPost extends Schema.CollectionType {
     title: Attribute.String & Attribute.Required;
     description: Attribute.RichText & Attribute.Required;
     summary: Attribute.Text & Attribute.Required;
-    landingImage: Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    > &
+    landingImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
     signUpLink: Attribute.String & Attribute.Required;
     contactEmail: Attribute.String & Attribute.Required;
     isVolunteeringOpportunity: Attribute.Boolean & Attribute.Required;
+    url: Attribute.String & Attribute.Required & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
