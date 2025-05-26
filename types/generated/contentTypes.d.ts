@@ -1011,6 +1011,47 @@ export interface ApiGetInvolvedPageGetInvolvedPage extends Schema.SingleType {
   };
 }
 
+export interface ApiJobPostJobPost extends Schema.CollectionType {
+  collectionName: 'job_posts';
+  info: {
+    singularName: 'job-post';
+    pluralName: 'job-posts';
+    displayName: 'Job Post';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.RichText & Attribute.Required;
+    summary: Attribute.Text & Attribute.Required;
+    landingImage: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Attribute.Required;
+    signUpLink: Attribute.String & Attribute.Required;
+    contactEmail: Attribute.String & Attribute.Required;
+    isVolunteeringOpportunity: Attribute.Boolean & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::job-post.job-post',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::job-post.job-post',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Schema.SingleType {
   collectionName: 'landing_pages';
   info: {
@@ -1283,6 +1324,7 @@ declare module '@strapi/types' {
       'api::footer.footer': ApiFooterFooter;
       'api::fundraising-event.fundraising-event': ApiFundraisingEventFundraisingEvent;
       'api::get-involved-page.get-involved-page': ApiGetInvolvedPageGetInvolvedPage;
+      'api::job-post.job-post': ApiJobPostJobPost;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::mission-vision-and-values-page.mission-vision-and-values-page': ApiMissionVisionAndValuesPageMissionVisionAndValuesPage;
       'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
