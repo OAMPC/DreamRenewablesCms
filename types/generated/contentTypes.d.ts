@@ -1334,6 +1334,41 @@ export interface ApiOurWorkSubPageOurWorkSubPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiPhilanthropyPagePhilanthropyPage extends Schema.SingleType {
+  collectionName: 'philanthropy_pages';
+  info: {
+    singularName: 'philanthropy-page';
+    pluralName: 'philanthropy-pages';
+    displayName: 'Philanthropy Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    blogPostBody: Attribute.RichText & Attribute.Required;
+    blogPostSummary: Attribute.Text & Attribute.Required;
+    landingImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    author: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::philanthropy-page.philanthropy-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::philanthropy-page.philanthropy-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1367,6 +1402,7 @@ declare module '@strapi/types' {
       'api::our-team-page.our-team-page': ApiOurTeamPageOurTeamPage;
       'api::our-work-page.our-work-page': ApiOurWorkPageOurWorkPage;
       'api::our-work-sub-page.our-work-sub-page': ApiOurWorkSubPageOurWorkSubPage;
+      'api::philanthropy-page.philanthropy-page': ApiPhilanthropyPagePhilanthropyPage;
     }
   }
 }

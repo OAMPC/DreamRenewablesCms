@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "philanthropy_pages",
+  "info": {
+    "singularName": "philanthropy-page",
+    "pluralName": "philanthropy-pages",
+    "displayName": "Philanthropy Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "blogPostBody": {
+      "type": "richtext",
+      "required": true
+    },
+    "blogPostSummary": {
+      "type": "text",
+      "required": true
+    },
+    "landingImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
