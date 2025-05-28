@@ -1187,6 +1187,42 @@ export interface ApiOurDonorsPageOurDonorsPage extends Schema.SingleType {
   };
 }
 
+export interface ApiOurStoryPageOurStoryPage extends Schema.SingleType {
+  collectionName: 'our_story_pages';
+  info: {
+    singularName: 'our-story-page';
+    pluralName: 'our-story-pages';
+    displayName: 'Our Story Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    blogPostBody: Attribute.RichText & Attribute.Required;
+    blogPostSummary: Attribute.Text & Attribute.Required;
+    landingImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    author: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-story-page.our-story-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-story-page.our-story-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOurTeamPageOurTeamPage extends Schema.SingleType {
   collectionName: 'our_team_pages';
   info: {
@@ -1327,6 +1363,7 @@ declare module '@strapi/types' {
       'api::mission-vision-and-values-page.mission-vision-and-values-page': ApiMissionVisionAndValuesPageMissionVisionAndValuesPage;
       'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
       'api::our-donors-page.our-donors-page': ApiOurDonorsPageOurDonorsPage;
+      'api::our-story-page.our-story-page': ApiOurStoryPageOurStoryPage;
       'api::our-team-page.our-team-page': ApiOurTeamPageOurTeamPage;
       'api::our-work-page.our-work-page': ApiOurWorkPageOurWorkPage;
       'api::our-work-sub-page.our-work-sub-page': ApiOurWorkSubPageOurWorkSubPage;

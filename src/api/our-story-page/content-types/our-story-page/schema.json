@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_story_pages",
+  "info": {
+    "singularName": "our-story-page",
+    "pluralName": "our-story-pages",
+    "displayName": "Our Story Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "blogPostBody": {
+      "type": "richtext",
+      "required": true
+    },
+    "blogPostSummary": {
+      "type": "text",
+      "required": true
+    },
+    "landingImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
