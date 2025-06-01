@@ -1,15 +1,18 @@
 {
   "collectionName": "components_utility_standard_links",
   "info": {
-    "displayName": "Standard Link"
+    "displayName": "Standard Link",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "linkString": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "linkSlug": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_get_involved_page_sections",
   "info": {
-    "displayName": "Sections"
+    "displayName": "Sections",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,15 +15,15 @@
       "required": true
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "link": {
       "type": "component",
@@ -30,14 +31,15 @@
       "component": "utility.standard-link"
     },
     "linkIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
