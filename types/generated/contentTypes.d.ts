@@ -836,7 +836,7 @@ export interface ApiAnnualReportAnnualReport extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required & Attribute.Unique;
     description: Attribute.Text & Attribute.Required;
     cardImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
