@@ -164,6 +164,7 @@ export interface GetInvolvedPageSections extends Schema.Component {
   collectionName: 'components_get_involved_page_sections';
   info: {
     displayName: 'Sections';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -171,7 +172,8 @@ export interface GetInvolvedPageSections extends Schema.Component {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
     link: Attribute.Component<'utility.standard-link'>;
-    linkIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    linkIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
   };
 }
 
@@ -507,10 +509,11 @@ export interface UtilityStandardLink extends Schema.Component {
   collectionName: 'components_utility_standard_links';
   info: {
     displayName: 'Standard Link';
+    description: '';
   };
   attributes: {
-    linkString: Attribute.String;
-    linkSlug: Attribute.String;
+    linkString: Attribute.String & Attribute.Required;
+    linkSlug: Attribute.String & Attribute.Required;
   };
 }
 

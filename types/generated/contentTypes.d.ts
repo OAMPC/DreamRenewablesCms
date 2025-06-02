@@ -975,6 +975,41 @@ export interface ApiFundraisingEventFundraisingEvent
   };
 }
 
+export interface ApiFundraisingPageFundraisingPage extends Schema.SingleType {
+  collectionName: 'fundraising_pages';
+  info: {
+    singularName: 'fundraising-page';
+    pluralName: 'fundraising-pages';
+    displayName: 'Fundraising Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    landingCard: Attribute.Component<'get-involved-page.landing-card'> &
+      Attribute.Required;
+    sections: Attribute.Component<'get-involved-page.sections', true> &
+      Attribute.Required;
+    paymentSection: Attribute.Component<'get-involved-page.payment-section'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::fundraising-page.fundraising-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::fundraising-page.fundraising-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGetInvolvedPageGetInvolvedPage extends Schema.SingleType {
   collectionName: 'get_involved_pages';
   info: {
@@ -1392,6 +1427,7 @@ declare module '@strapi/types' {
       'api::donate-page.donate-page': ApiDonatePageDonatePage;
       'api::footer.footer': ApiFooterFooter;
       'api::fundraising-event.fundraising-event': ApiFundraisingEventFundraisingEvent;
+      'api::fundraising-page.fundraising-page': ApiFundraisingPageFundraisingPage;
       'api::get-involved-page.get-involved-page': ApiGetInvolvedPageGetInvolvedPage;
       'api::job-post.job-post': ApiJobPostJobPost;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
