@@ -824,6 +824,42 @@ export interface ApiAboutUsPageAboutUsPage extends Schema.SingleType {
   };
 }
 
+export interface ApiAnnualReportAnnualReport extends Schema.CollectionType {
+  collectionName: 'annual_reports';
+  info: {
+    singularName: 'annual-report';
+    pluralName: 'annual-reports';
+    displayName: 'Annual Report';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required & Attribute.Unique;
+    description: Attribute.Text & Attribute.Required;
+    cardImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    link: Attribute.String & Attribute.Required;
+    datePublished: Attribute.Date & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::annual-report.annual-report',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::annual-report.annual-report',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogPostBlogPost extends Schema.CollectionType {
   collectionName: 'blog_posts';
   info: {
@@ -1423,6 +1459,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us-page.about-us-page': ApiAboutUsPageAboutUsPage;
+      'api::annual-report.annual-report': ApiAnnualReportAnnualReport;
       'api::blog-post.blog-post': ApiBlogPostBlogPost;
       'api::donate-page.donate-page': ApiDonatePageDonatePage;
       'api::footer.footer': ApiFooterFooter;
