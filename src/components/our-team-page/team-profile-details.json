@@ -1,20 +1,21 @@
 {
   "collectionName": "components_our_team_page_team_profile_details",
   "info": {
-    "displayName": "Team Profile Details"
+    "displayName": "Team Profile Details",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "profileImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "profileName": {
       "type": "string",
@@ -23,6 +24,11 @@
     "profileDescription": {
       "type": "string",
       "required": true
+    },
+    "linkedinLink": {
+      "type": "string",
+      "required": true,
+      "default": "https://www.linkedin.com/company/dream-renewables/"
     }
   }
 }
