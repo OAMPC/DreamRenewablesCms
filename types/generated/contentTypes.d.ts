@@ -878,6 +878,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     landingImage: Attribute.Media<'images'> & Attribute.Required;
     author: Attribute.String & Attribute.Required;
     url: Attribute.String & Attribute.Required & Attribute.Unique;
+    showRelatedBlogPosts: Attribute.Boolean & Attribute.DefaultTo<true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

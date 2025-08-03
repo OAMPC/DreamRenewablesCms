@@ -41,6 +41,10 @@
       "required": true,
       "unique": true,
       "regex": "^[a-z]+(-[a-z]+)*$"
+    },
+    "showRelatedBlogPosts": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
