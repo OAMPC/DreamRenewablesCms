@@ -360,12 +360,16 @@ export interface OurTeamPageTeamProfileDetails extends Schema.Component {
   collectionName: 'components_our_team_page_team_profile_details';
   info: {
     displayName: 'Team Profile Details';
+    description: '';
   };
   attributes: {
     profileImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
     profileName: Attribute.String & Attribute.Required;
     profileDescription: Attribute.String & Attribute.Required;
+    linkedinLink: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'https://www.linkedin.com/company/dream-renewables/'>;
   };
 }
 
